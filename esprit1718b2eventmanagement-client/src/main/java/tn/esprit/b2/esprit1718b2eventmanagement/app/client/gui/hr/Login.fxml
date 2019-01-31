@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #1c4464; -fx-border-color: #b4dcbc;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.hr.LoginController">
+   <children>
+      <ImageView fitHeight="668.0" fitWidth="649.0" opacity="0.21" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@4391.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="576.0" layoutY="61.0" prefHeight="509.0" prefWidth="444.0" style="-fx-background-color: #b4dcbc;">
+         <children>
+            <JFXButton fx:id="logg" layoutX="74.0" layoutY="346.0" onAction="#logingIn" prefHeight="31.0" prefWidth="297.0" text="Login" textFill="#6b6b64">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="190.0" layoutY="87.0" prefHeight="28.0" prefWidth="66.0" text="Sign In" textAlignment="CENTER" textFill="#6b6b64" underline="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="login" labelFloat="true" layoutX="74.0" layoutY="178.0" prefHeight="31.0" prefWidth="297.0" promptText="Username" unFocusColor="#6b6b64">
+               <font>
+                  <Font name="Symbol" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" labelFloat="true" layoutX="74.0" layoutY="255.0" prefHeight="31.0" prefWidth="297.0" promptText="Password" unFocusColor="#6b6b64" />
+            <Label fx:id="message" layoutX="57.0" layoutY="414.0" prefHeight="50.0" prefWidth="330.0" textFill="RED" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <JFXButton fx:id="signin" layoutX="191.0" layoutY="394.0" onAction="#signIn" prefHeight="59.0" prefWidth="177.0" text="Sign Up" textFill="#b4dcbc" underline="true">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1054.0" layoutY="8.0" onAction="#close" text="X" textFill="#b4dcbc" fx:id="x">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

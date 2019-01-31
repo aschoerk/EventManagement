@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Login V14</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png"
+		href="#{request.contextPath}/resources/images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/vendor/bootstrap/css/bootstrap.min.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/vendor/animate/animate.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/vendor/css-hamburgers/hamburgers.min.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/vendor/animsition/css/animsition.min.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/vendor/select2/select2.min.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/vendor/daterangepicker/daterangepicker.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/css/util.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/css/main.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"/>
+	<style>
+	.w3-lobster {
+    font-family: "Lobster", Sans-serif;
+}
+body, html {
+	height: 100%;
+}
+
+.bgimg {
+	background-position: center;
+	background-size: cover;
+	background-image:
+		url('http://localhost:18080/esprit1718b2eventmanagement-web/resources/img/1405.jpg');
+	min-height: 55%;
+}
+i:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: #111;
+}
+
+.active {
+	background-color: #b4dcbc;
+}
+</style>
+
+
+</h:head>
+<h:body>
+
+	<!-- Sidebar/menu -->
+	<nav class="w3-sidebar w3-collapse w3-white w3-animate-left"
+		style="z-index: 3; width: 300px;" id="mySidebar">
+		<br></br>
+		<div class="w3-container">
+			<a href="#" onclick="w3_close()"
+				class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+				title="close menu"> <i class="fa fa-remove"></i>
+			</a> <img src="/w3images/avatar_g2.jpg" style="width: 45%;"
+				class="w3-round" /><br></br> <br></br>
+			<h4>
+				<b>Sector's Club</b>
+			</h4>
+			<p class="w3-text-grey">welcome</p>
+		</div>
+		<div class="w3-bar-block">
+			<a href="#portfolio" onclick="w3_close()"
+				class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+				class="fa fa-home fa-fw w3-margin-right"></i>HOME</a> <a
+				href="#portfolio" onclick="w3_close()"
+				class="w3-bar-item w3-button w3-padding "><i
+				class="fa fa-user fa-fw w3-margin-right"></i>PROFILE</a> <a
+				href="#portfolio" onclick="w3_close()"
+				class="w3-bar-item w3-button w3-padding "><i
+				class="fa fa-th-large fa-fw w3-margin-right"></i>EXHIBITION HAll</a> <a
+				href="/esprit1718b2eventmanagement-web/Event.jsf" onclick="w3_close()"
+				class="w3-bar-item w3-button w3-padding"><i
+				class="fa fa-user fa-fw w3-margin-right"></i>EVENTROOM</a> <a
+				href="#contact" onclick="w3_close()"
+				class="w3-bar-item w3-button w3-padding"><i
+				class="fa fa-bell fa-fw w3-margin-right"></i>BANK</a>
+		</div>
+		<div class="w3-panel w3-large">
+			<i class="fa fa-facebook-official w3-hover-opacity"></i> <i
+				class="fa fa-instagram w3-hover-opacity"></i> <i
+				class="fa fa-snapchat w3-hover-opacity"></i> <i
+				class="fa fa-pinterest-p w3-hover-opacity"></i> <i
+				class="fa fa-twitter w3-hover-opacity"></i> <i
+				class="fa fa-linkedin w3-hover-opacity"></i>
+		</div>
+	</nav>
+	<header
+		class="bgimg w3-display-container w3-grayscale-min w3-animate-top">
+		<div class="w3-display-topright w3-padding-large">
+		
+	<a class="w3-dropdown-hover"> <ui:include src="/notif.xhtml"/>
+	 </a>
+	<a><i class="w3-margin-left fa fa-sign-out w3-large fa-fw "></i>Logout </a>
+
+		</div>
+		<div class="w3-display-top"><br></br>
+		<hr></hr>
+		</div> 
+<div class="w3-display-middle">
+ <h1 class=" w3-xxxlarge w3-padding w3-border w3-animate-fading w3-lobster font-effect-brick-sign" >Sector's club</h1>
+		</div>
+
+	</header>
+
+
+	<div id="dropDownSelect1"></div>
+
+	<!--===============================================================================================-->
+	<script
+		src="#{request.contextPath}/resources/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script
+		src="#{request.contextPath}/resources/vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script
+		src="#{request.contextPath}/resources/vendor/bootstrap/js/popper.js"></script>
+	<script
+		src="#{request.contextPath}/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script
+		src="#{request.contextPath}/resources/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script
+		src="#{request.contextPath}/resources/vendor/daterangepicker/moment.min.js"></script>
+	<script
+		src="#{request.contextPath}/resources/vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script
+		src="#{request.contextPath}/resources/vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="#{request.contextPath}/resources/js/main.js"></script>
+
+</h:body>
+</html>

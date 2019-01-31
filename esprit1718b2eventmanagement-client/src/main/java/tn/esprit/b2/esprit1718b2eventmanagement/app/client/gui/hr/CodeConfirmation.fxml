@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #1c4464;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.hr.CodeConfirmationController">
+   <children>
+      <ImageView fitHeight="946.0" fitWidth="655.0" layoutY="-2.0" opacity="0.21" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@4391.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="message" layoutX="166.0" layoutY="304.0" prefHeight="31.0" prefWidth="269.0" />
+      <AnchorPane layoutX="584.0" layoutY="50.0" prefHeight="509.0" prefWidth="444.0" style="-fx-background-color: #b4dcbc;">
+         <children>
+            <JFXTextField fx:id="codeField" layoutX="108.0" layoutY="335.0" prefHeight="40.0" prefWidth="240.0" unFocusColor="#1c4464" />
+            <ImageView fitHeight="60.0" fitWidth="74.0" layoutX="192.0" layoutY="225.0" opacity="0.59" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-barcode-24.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="72.0" layoutY="147.0" prefHeight="31.0" prefWidth="311.0" text="You will find the code in your mail" textFill="#1c4464">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="1054.0" layoutY="14.0" onAction="#close" text="X" textFill="#b4dcbc" fx:id="x">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="confirmation" layoutX="743.0" layoutY="576.0" onAction="#checkConfirmation" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #b4dcbc; -fx-border-color: #b4dcbc;" text="Validate" textFill="#1c4464">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

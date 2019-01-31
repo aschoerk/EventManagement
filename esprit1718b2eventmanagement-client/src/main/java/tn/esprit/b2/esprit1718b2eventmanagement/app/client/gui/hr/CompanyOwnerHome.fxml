@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1100.0" style="-fx-border-color: #b4dcbc;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.hr.CompanyOwnerHomeController">
+   <children>
+      <HBox prefHeight="650.0" prefWidth="1100.0">
+         <children>
+            <VBox prefHeight="650.0" prefWidth="114.0" style="-fx-background-color: #b4dcbc;">
+               <children>
+                  <HBox prefHeight="101.0" prefWidth="105.0" style="-fx-background-color: #1c4464;" />
+                  <VBox alignment="CENTER" prefHeight="368.0" prefWidth="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" onMouseClicked="#goToCompanyOwnerHome" prefHeight="89.0" prefWidth="105.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-page-d’accueil-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Home" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" onMouseClicked="#goToProfils" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-utilisateur-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="21.0" prefWidth="45.0" text="Profile" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox fx:id="booth" alignment="CENTER" onMouseClicked="#boothManagement" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@4535_-_Stall-128.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Booths" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" onMouseClicked="#goToEvents" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-calendar-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Events" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" onMouseClicked="#Go_auction_Owner" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-sell-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Auction House" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" onMouseClicked="#back" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons8-arrière-filled-50.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Back" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#b4dcbc" height="7.39" radius="5.0424999999999995" spread="0.01" width="14.78" />
+               </effect>
+            </VBox>
+            <VBox prefHeight="650.0" prefWidth="1005.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="995.0" style="-fx-background-color: #fff;">
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="857.0">
+                           <children>
+                              <VBox prefHeight="102.0" prefWidth="48.0" />
+                              <VBox alignment="CENTER" prefHeight="102.0" prefWidth="159.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <Label fx:id="userName" prefHeight="50.0" prefWidth="271.0" text="user Name" textFill="#6b6b64" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="102.0" prefWidth="90.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="30.0" onMouseClicked="#logout" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-fermer-50.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets right="30.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets right="30.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="30.0" />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="102.0" prefWidth="21.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fx:id="close" fitHeight="60.0" fitWidth="30.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../EM/css/icons8_Close_Window_48px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets left="30.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="550.0" prefWidth="975.0">
+                     <children>
+                        <VBox prefHeight="550.0" prefWidth="1025.0">
+                           <children>
+                              <HBox prefHeight="53.0" prefWidth="996.0">
+                                 <children>
+                                    <VBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="148.0">
+                                       <children>
+                                          <JFXButton text="Search">
+                                             <graphic>
+                                                <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@../EM/css/searchzey.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                    <JFXTextField fx:id="shearcher" onKeyReleased="#shearchDisplay" prefHeight="37.0" prefWidth="272.0" />
+                                    <VBox prefHeight="53.0" prefWidth="145.0" />
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tb" prefHeight="241.0" prefWidth="996.0">
+                                <columns>
+                                  <TableColumn fx:id="nomtb" prefWidth="283.0" text="Nom" />
+                                  <TableColumn fx:id="moneytb" minWidth="0.0" prefWidth="121.0" text="Salary" />
+                                    <TableColumn fx:id="phonetb" prefWidth="211.0" text="work phone" />
+                                    <TableColumn fx:id="mailtb" prefWidth="380.0" text="email" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children></HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

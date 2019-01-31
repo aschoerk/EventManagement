@@ -1,0 +1,93 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/template/template.xhtml" xmlns:p="http://primefaces.org/ui">
+	<ui:define name="pageTitle"></ui:define>
+	<ui:define name="pageContent">
+	<link rel="stylesheet" type="text/css" href="../../infocenter/myCss/bootstrap.min.css" />
+		<h1>Liste des posts</h1>
+		<h:form>
+			<p:dataTable value="#{postBean.posts}" var="e" border="2"
+						rendered="#{not postBean.showForm}">
+				<p:column id="c1">
+					<f:facet name="header">
+						<h:outputText value="POST ID" />
+					</f:facet>
+					<h:outputText value="#{e.id}" />
+				</p:column>
+				<p:column id="c2">
+					<f:facet name="header">
+						<h:outputText value="TITLE" />
+					</f:facet>
+					<h:outputText value="#{e.title}" />
+				</p:column>
+				<p:column id="c3">
+					<f:facet name="header">
+						<h:outputText value="DESCRIPTION" />
+					</f:facet>
+					<h:outputText value="#{e.description}" />
+				</p:column>
+				<p:column id="c4">
+					<f:facet name="header">
+						<h:outputText value="BLOG" />
+					</f:facet>
+					<h:outputText value="#{e.blog.name}" />
+				</p:column>
+				<p:column id="c5">
+					<f:facet name="header">
+						<h:outputText value="DATE D'AJOUT" />
+					</f:facet>
+					<h:outputText value="#{e.created_at}" />
+				</p:column>
+				<p:column id="c6">
+					<f:facet name="header">
+						<h:outputText value="Selection" />
+					</f:facet>
+					<h:commandButton action="#{postBean.doSelect()}"
+						value="manage">
+						<f:setPropertyActionListener value="#{e}"
+							target="#{postBean.post}"></f:setPropertyActionListener>
+					</h:commandButton>
+				</p:column>
+			</p:dataTable>
+
+			<p:panelGrid columns="" border="2"  bgcolor="AliceBlue" styleClass="gridPanel"
+				rendered="#{postBean.showForm}">
+				<div class="col-md-4">
+					<h:outputText value="TITLE :" />
+					<h:inputText value="#{postBean.post.title}" /><br />
+					
+				</div>
+				<div class="col-md-4">
+				<h:outputText value="DESCRIPTION :" />
+					<h:inputText value="#{postBean.post.description}" />
+				</div>
+				
+				<h:outputText value="nbre de commentaire :" />
+				<h:outputText value="#{postBean.comment.nbOfComment}" />
+				<br />
+				<h:dataTable value="#{postBean.commentByPost}" var="c" border="">
+					<p:column id="co1">
+						<h:outputText value="Comment : " />
+						<h:outputText value="#{c.commentaire}" />
+					</p:column>
+				</h:dataTable>
+				<h:outputText value="Votre commentaire :" />
+				<h:inputText value="#{postBean.comment.commentaire}" />
+				
+				<h:commandButton action="#{postBean.doAddComment()}"
+					value="save comment" />
+				<h:commandButton action="#{postBean.doAddPost()}"
+					value="save/update" />
+				<h:commandButton action="#{postBean.doDeletePost()}"
+					value="delete" />
+				<h:commandButton action="#{postBean.doCancel}" value="cancel" />
+			</p:panelGrid>
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+
+

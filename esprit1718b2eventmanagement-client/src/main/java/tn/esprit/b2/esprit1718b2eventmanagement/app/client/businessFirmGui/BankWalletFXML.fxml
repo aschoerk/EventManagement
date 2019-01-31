@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #b4dcbc;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.businessFirmGui.BankWalletController">
+   <children>
+      <AnchorPane prefHeight="656.0" prefWidth="294.0" style="-fx-background-color: #1c4464;">
+         <children>
+            <AnchorPane layoutY="500.0" onMouseClicked="#Go_back" prefHeight="54.0" prefWidth="294.0" style="-fx-background-color: #6b6b64;">
+               <children>
+                  <Text fill="#fff9f9" layoutX="112.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" wrappingWidth="69.6708984375">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="254.0" onMouseClicked="#GoWallet" prefHeight="54.0" prefWidth="294.0" style="-fx-background-color: #f4f474;">
+               <children>
+                  <Text layoutX="89.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Wallet " wrappingWidth="116.6708984375">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="account" layoutY="132.0" onMouseClicked="#GoAccount" prefHeight="54.0" prefWidth="294.0" style="-fx-background-color: #6b6b64;">
+               <children>
+                  <Text fill="WHITE" layoutX="99.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account" wrappingWidth="95.6708984375">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+            </AnchorPane>
+            <AnchorPane fx:id="transferts" layoutY="193.0" onKeyPressed="#GoTransferts" onMouseClicked="#GoTransferts" prefHeight="54.0" prefWidth="294.0" style="-fx-background-color: #6b6b64;">
+               <children>
+                  <Text fill="WHITE" layoutX="92.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transferts" wrappingWidth="109.6708984375">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Text fill="WHITE" layoutX="72.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" wrappingWidth="150.6708984375">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="Butt" layoutX="106.0" layoutY="604.0" text="  " visible="false" />
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="my_amount" editable="false" layoutX="533.0" layoutY="44.0" prefHeight="11.0" prefWidth="86.0" />
+      <Text layoutX="330.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your current amout is :" wrappingWidth="203.2861328125">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="330.0" layoutY="110.0" prefHeight="236.0" prefWidth="725.0" style="-fx-border-color: #f4f474; -fx-background-color: #f4f499;">
+         <children>
+            <JFXButton layoutX="274.0" layoutY="181.0" onAction="#MakeTransfert" prefHeight="35.0" prefWidth="184.0" style="-fx-background-color: #1c4474;" text="Make Transfert" textFill="#fcfcfc">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="dest_RIB" layoutX="242.0" layoutY="50.0" prefHeight="31.0" prefWidth="278.0" />
+            <JFXTextField fx:id="T_Amount" layoutX="245.0" layoutY="132.0" prefHeight="31.0" prefWidth="151.0" />
+            <Text layoutX="130.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dest RIB  :" wrappingWidth="144.6708984375">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="130.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount  :" wrappingWidth="144.6708984375">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="132.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PassCode  :" wrappingWidth="144.6708984375">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="PassCode" layoutX="243.0" layoutY="93.0" prefHeight="31.0" prefWidth="236.0" />
+            <JFXTextField fx:id="your_Rib" layoutX="243.0" layoutY="18.0" prefHeight="31.0" prefWidth="278.0" />
+            <Text layoutX="130.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your RIB  :" wrappingWidth="144.6708984375">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="408.0" layoutY="398.0" prefHeight="176.0" prefWidth="570.0" style="-fx-background-color: #1c4474;">
+         <children>
+            <JFXButton layoutX="199.0" layoutY="104.0" onAction="#FillWallet" style="-fx-background-color: #f7f746;" text="Fill your wallet">
+               <font>
+                  <Font name="Berlin Sans FB" size="23.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Payment_pane" layoutX="309.0" layoutY="44.0" prefHeight="566.0" prefWidth="775.0" style="-fx-background-color: #f4f499; -fx-border-color: #1c4466; -fx-border-radius: 4;" visible="false">
+         <children>
+            <JFXTextField fx:id="degit1_input" layoutX="341.0" layoutY="59.0" prefHeight="31.0" prefWidth="70.0" />
+            <JFXTextField fx:id="degit2_input" layoutX="440.0" layoutY="59.0" prefHeight="31.0" prefWidth="70.0" />
+            <JFXTextField fx:id="degit3_input" layoutX="543.0" layoutY="60.0" prefHeight="31.0" prefWidth="70.0" />
+            <JFXTextField fx:id="degit4_input" layoutX="643.0" layoutY="59.0" prefHeight="31.0" prefWidth="62.0" />
+            <Text layoutX="107.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Card Number :" wrappingWidth="203.2861328125">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="519.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="16.2861328125">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="417.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="16.2861328125">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="619.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="16.2861328125">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="Visa" layoutX="275.0" layoutY="411.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="70.0" text="Visa" />
+            <CheckBox fx:id="AmericanExpress" layoutX="411.0" layoutY="411.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="151.0" text="American Express" />
+            <CheckBox fx:id="MasterCard" layoutX="92.0" layoutY="411.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="151.0" text="Master Card" />
+            <CheckBox fx:id="Discover" layoutX="599.0" layoutY="411.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="151.0" text="Discover" />
+            <JFXButton layoutX="279.0" layoutY="481.0" onAction="#Make_paye" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #1c4466;" text="Purchase" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="28.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="216.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVV:" wrappingWidth="86.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="cvv_input" layoutX="341.0" layoutY="116.0" prefHeight="31.0" prefWidth="70.0" />
+            <Text layoutX="106.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expiration Date:" wrappingWidth="151.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="EXP_month_input" layoutX="345.0" layoutY="179.0" prefHeight="31.0" prefWidth="32.0" />
+            <Text layoutX="398.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/" wrappingWidth="16.2861328125">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="EXP_Year_input" layoutX="421.0" layoutY="181.0" prefHeight="31.0" prefWidth="32.0" />
+            <Text layoutX="159.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount :" wrappingWidth="151.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="P_Amount_input" layoutX="323.0" layoutY="257.0" prefHeight="31.0" prefWidth="77.0" />
+            <ImageView fitHeight="115.0" fitWidth="645.0" layoutX="76.0" layoutY="307.0">
+               <image>
+                  <Image url="@../../../../../../../../../../../../../../../../../pngs/Credit-Card-Visa-And-Master-Card-PNG-File.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-5.0" prefHeight="32.0" prefWidth="1100.0" style="-fx-background-color: #1c4464;" AnchorPane.bottomAnchor="629.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-5.0">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1059.0" layoutY="-5.0" onAction="#Go_out" prefHeight="31.0" prefWidth="32.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gui/EM/css/icons8_Close_Window_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

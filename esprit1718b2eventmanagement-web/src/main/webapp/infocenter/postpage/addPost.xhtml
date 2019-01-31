@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+      >
+
+
+<h:head></h:head>
+<body>
+	<h1>Ajout de post</h1>
+	<h:form enctype="multipart/form-data">
+		<h:panelGrid columns="2">
+			<h:outputText value="TITLE :" />
+			<h:inputText value="#{postBean.post.title}" />			
+			<h:outputText value="DESCRIPTION :" />
+			<h:inputText value="#{postBean.post.description}" />
+			
+			<h:outputText value="IMAGE :" />
+			<p:fileUpload update="content"  style="width:500px;"
+                      fileUploadListener="#{postBean.uploadFile}">
+                    <p:growl id="content"  allowTypes="/(\.|\/)(gif|jpe?g|png)$/" showDetail="true" />
+			</p:fileUpload>
+			<h:commandButton action="#{postBean.doAddPost()}" value="Ajouter" />
+			
+		</h:panelGrid>
+	</h:form>
+</body>
+</html>

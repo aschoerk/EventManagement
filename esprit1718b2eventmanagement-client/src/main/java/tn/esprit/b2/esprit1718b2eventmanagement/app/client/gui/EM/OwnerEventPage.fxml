@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parent" prefHeight="650.0" prefWidth="1100.0" style="-fx-border-color: #b4dcbc;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.EM.OwnerEventPageController">
+   <children>
+      <HBox prefHeight="650.0" prefWidth="1100.0">
+         <children>
+            <VBox prefHeight="650.0" prefWidth="114.0" style="-fx-background-color: #b4dcbc;">
+               <children>
+                  <HBox prefHeight="101.0" prefWidth="105.0" style="-fx-background-color: #1c4464;" />
+                  <VBox alignment="CENTER" prefHeight="368.0" prefWidth="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" onKeyPressed="#goToCompanyOwnerHome" prefHeight="89.0" prefWidth="105.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../hr/icons8-page-d’accueil-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Home" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" onMouseClicked="#goToProfils" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../hr/icons8-utilisateur-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="21.0" prefWidth="45.0" text="Profile" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox fx:id="booth" alignment="CENTER" onMouseClicked="#boothManagement" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../hr/4535_-_Stall-128.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Booths" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" onMouseClicked="#goToEvents" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #f4f474;">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../hr/icons8-calendar-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Events" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <InnerShadow choke="0.28" color="#b4dcbc" height="18.04" radius="26.307499999999997" width="89.19" />
+                                 </effect>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" onKeyPressed="#Go_auction_Owner" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../hr/icons8-sell-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Auction House" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" onMouseClicked="#back" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../hr/icons8-arrière-filled-50.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Back" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#b4dcbc" height="7.39" radius="5.0424999999999995" spread="0.01" width="14.78" />
+               </effect>
+            </VBox>
+            <VBox prefHeight="650.0" prefWidth="1005.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="995.0" style="-fx-background-color: #fff;">
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="857.0">
+                           <children>
+                              <VBox prefHeight="102.0" prefWidth="48.0" />
+                              <VBox alignment="CENTER" prefHeight="102.0" prefWidth="159.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <Label fx:id="userName" prefHeight="50.0" prefWidth="271.0" text="user Name" textFill="#6b6b64" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="102.0" prefWidth="90.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="30.0" onMouseClicked="#logout" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../hr/icons8-fermer-50.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets right="30.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets right="30.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="30.0" />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="102.0" prefWidth="21.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fx:id="close" fitHeight="60.0" fitWidth="30.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@css/icons8_Close_Window_48px.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets left="30.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <AnchorPane fx:id="par" prefHeight="554.0" prefWidth="996.0">
+                     <children>
+                        <ImageView fitHeight="134.0" fitWidth="995.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@css/Capture.PNG" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane fx:id="fortheripplermr" layoutX="883.0">
+                           <children>
+                              <AnchorPane fx:id="mreatedAnchor" opacity="0.61" prefHeight="134.0" prefWidth="113.0" style="-fx-background-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="34.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@css/icons8-rating-100.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="7.0" layoutY="84.0" text="Most rated event" textFill="#b4dcbc">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="mrated" layoutX="42.0" layoutY="111.0" text="Label" textFill="#b4dcbc">
+                                       <font>
+                                          <Font name="Arial Narrow" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fortheripplermv" layoutX="766.0">
+                           <children>
+                              <AnchorPane fx:id="mviewAnchor" opacity="0.61" prefHeight="134.0" prefWidth="117.0" style="-fx-background-color: #1c4464;">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="34.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@css/icons8-eye-100.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="6.0" layoutY="84.0" text="Most viewed event" textFill="#b4dcbc">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="mviewed" layoutX="43.0" layoutY="110.0" text="Label" textFill="#b4dcbc">
+                                       <font>
+                                          <Font name="Arial Narrow" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="945.0" layoutY="136.0" onAction="#addevent" prefHeight="50.0" prefWidth="45.0" style="-fx-background-radius: 180; -fx-background-color: #1c4464;">
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@css/icons8-plus-math-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Add a new Event" />
+                           </tooltip>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                        <AnchorPane fx:id="eventshow" layoutX="14.0" layoutY="254.0" prefHeight="201.0" prefWidth="977.0">
+                           <children>
+                              <GridPane hgap="20.0" layoutX="55.0" layoutY="8.0" prefHeight="186.0" prefWidth="866.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="174.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="175.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="173.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <AnchorPane fx:id="anchor1" prefHeight="186.0" prefWidth="274.0" style="-fx-background-color: #b4dcbc;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <ImageView fx:id="imgv1" fitHeight="72.0" fitWidth="276.0" pickOnBounds="true" />
+                                          <AnchorPane layoutY="55.0" prefHeight="17.0" prefWidth="276.0" style="-fx-background-color: #6b6b64;">
+                                             <children>
+                                                <Label fx:id="name1" layoutX="6.0" prefHeight="17.0" prefWidth="86.0" text="Label" textFill="#c9e2ee">
+                                                   <font>
+                                                      <Font name="Arial Black" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="type1" layoutX="222.0" text="Type" textFill="#c9ecee">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="169.0" prefHeight="17.0" prefWidth="276.0" style="-fx-background-color: #6b6b64;">
+                                             <children>
+                                                <Label fx:id="link1" layoutX="126.0" layoutY="1.0" text="Label" textFill="#c0f2ff">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <Label fx:id="sector1" layoutX="222.0" layoutY="7.0" style="-fx-background-color: #6b6b64;" text="Sector" textFill="#00e1ff">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="16.0" layoutY="152.0" text="Phone N° :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="16.0" layoutY="136.0" text="Address :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="15.0" layoutY="121.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="104.0" text="Rate : ">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="15.0" layoutY="87.0" text="End Date :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="70.0" text="Start Date:">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="sdate1" layoutX="96.0" layoutY="70.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="edate1" layoutX="96.0" layoutY="87.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="rate1" layoutX="96.0" layoutY="104.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="visits1" layoutX="96.0" layoutY="121.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="address1" layoutX="96.0" layoutY="136.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="phone1" layoutX="96.0" layoutY="152.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutY="-1.0" text="Label" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="anchor3" prefHeight="186.0" prefWidth="309.0" style="-fx-background-color: #b4dcbc;" GridPane.columnIndex="2">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <AnchorPane prefHeight="186.0" prefWidth="274.0">
+                                             <children>
+                                                <ImageView fx:id="imgv3" fitHeight="72.0" fitWidth="276.0" pickOnBounds="true" />
+                                                <AnchorPane layoutY="55.0" prefHeight="17.0" prefWidth="276.0" style="-fx-background-color: #6b6b64;">
+                                                   <children>
+                                                      <Label fx:id="name3" layoutX="6.0" prefHeight="17.0" prefWidth="86.0" text="Label" textFill="#c9e2ee">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="type3" layoutX="222.0" text="Type" textFill="#c9ecee">
+                                                         <font>
+                                                            <Font name="Arial Narrow" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutY="169.0" prefHeight="17.0" prefWidth="276.0" style="-fx-background-color: #6b6b64;">
+                                                   <children>
+                                                      <Label fx:id="link3" layoutX="126.0" layoutY="1.0" text="Label" textFill="#c0f2ff">
+                                                         <font>
+                                                            <Font name="Arial Narrow" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <Label fx:id="sector3" layoutX="222.0" layoutY="7.0" style="-fx-background-color: #6b6b64;" text="Sector" textFill="#2bf4ff">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="16.0" layoutY="152.0" text="Phone N° :">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="16.0" layoutY="136.0" text="Address :">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="15.0" layoutY="121.0" text="Visits :">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="104.0" text="Rate : ">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="15.0" layoutY="87.0" text="End Date :">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="70.0" text="Start Date:">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <Label fx:id="sdate3" layoutX="106.0" layoutY="72.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="edate3" layoutX="106.0" layoutY="89.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="rate3" layoutX="106.0" layoutY="106.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="visits3" layoutX="106.0" layoutY="123.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="address3" layoutX="106.0" layoutY="138.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="phone3" layoutX="106.0" layoutY="154.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="anchor2" prefHeight="272.0" prefWidth="174.0" style="-fx-background-color: #b4dcbc;" GridPane.columnIndex="1">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <AnchorPane prefHeight="186.0" prefWidth="274.0">
+                                             <children>
+                                                <ImageView fx:id="imgv2" fitHeight="72.0" fitWidth="276.0" pickOnBounds="true" />
+                                                <AnchorPane layoutY="55.0" prefHeight="17.0" prefWidth="276.0" style="-fx-background-color: #6b6b64;">
+                                                   <children>
+                                                      <Label fx:id="name2" layoutX="6.0" prefHeight="17.0" prefWidth="86.0" text="Label" textFill="#c9e2ee">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="type2" layoutX="222.0" text="Type" textFill="#c9ecee">
+                                                         <font>
+                                                            <Font name="Arial Narrow" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutY="169.0" prefHeight="17.0" prefWidth="276.0" style="-fx-background-color: #6b6b64;">
+                                                   <children>
+                                                      <Label fx:id="link2" layoutX="126.0" layoutY="1.0" text="Label" textFill="#c0f2ff">
+                                                         <font>
+                                                            <Font name="Arial Narrow" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <Label fx:id="sector2" layoutX="222.0" layoutY="7.0" style="-fx-background-color: #6b6b64;" text="Sector" textFill="#60e7fc">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="16.0" layoutY="152.0" text="Phone N° :">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="16.0" layoutY="136.0" text="Address :">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="15.0" layoutY="121.0" text="Visits :">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="104.0" text="Rate : ">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="15.0" layoutY="87.0" text="End Date :">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="70.0" text="Start Date:">
+                                                   <font>
+                                                      <Font name="Arial Narrow" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <Label fx:id="sdate2" layoutX="106.0" layoutY="71.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="edate2" layoutX="106.0" layoutY="88.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="rate2" layoutX="106.0" layoutY="105.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="visits2" layoutX="106.0" layoutY="122.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="address2" layoutX="106.0" layoutY="137.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="phone2" layoutX="106.0" layoutY="153.0" text="Visits :">
+                                             <font>
+                                                <Font name="Arial Narrow" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                              <JFXButton fx:id="prev" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutY="80.0" onAction="#onPrev" style="-fx-background-radius: 180;">
+                                 <graphic>
+                                    <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                       <image>
+                                          <Image url="@css/icons8-next-page-64.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="next" contentDisplay="GRAPHIC_ONLY" layoutX="924.0" layoutY="80.0" onAction="#onNext" style="-fx-background-radius: 180;">
+                                 <graphic>
+                                    <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@css/icons8-next-page-64.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="136.0" prefHeight="200.0" prefWidth="935.0" />
+                        <AnchorPane fx:id="fortheripplerms" layoutX="649.0">
+                           <children>
+                              <AnchorPane fx:id="msubsAnchor" opacity="0.43" prefHeight="134.0" prefWidth="117.0" style="-fx-background-color: #6b6b64;">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="33.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@css/icons8-heart-outline-80.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="2.0" layoutY="84.0" text="Highest subscription" textFill="#b4dcbc">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="msubs" layoutX="43.0" layoutY="110.0" text="Label" textFill="#b4dcbc">
+                                       <font>
+                                          <Font name="Arial Narrow" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

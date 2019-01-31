@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.web.WebView?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #b4dcbc; -fx-border-color: #dcefe0;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.EM.EventPageController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="187.0" prefHeight="403.0" prefWidth="915.0">
+         <children>
+            <AnchorPane layoutX="-1.0" layoutY="-22.0" prefHeight="48.0" prefWidth="892.0" style="-fx-background-color: #6b6b64;" />
+            <Separator layoutX="-1.0" layoutY="18.0" prefHeight="3.0" prefWidth="892.0" style="-fx-background-color: #f4f474;" />
+            <Text fx:id="eventName" fill="#1c4464" layoutX="26.0" layoutY="18.0" stroke="#f4f474" strokeLineCap="ROUND" strokeType="OUTSIDE" text="Text" wrappingWidth="260.00003004074097">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+            </Text>
+            <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="38.0" prefHeight="181.0" prefWidth="414.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="203.0" prefWidth="400.0" style="-fx-background-color: white;" stylesheets="@css/AddSpecialEvent.css">
+                     <children>
+                        <TextFlow layoutX="2.0" layoutY="42.0" prefHeight="161.0" prefWidth="376.0">
+                           <children>
+                              <Text fx:id="eventDesc" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                 <font>
+                                    <Font name="Arial Narrow" size="12.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </TextFlow>
+                        <Label layoutX="25.0" layoutY="14.0" text="About this event :" textFill="#181b2c">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <effect>
+                  <DropShadow color="#4c513e" />
+               </effect>
+            </ScrollPane>
+            <ImageView fx:id="adressWV" fitHeight="174.0" fitWidth="414.0" layoutX="14.0" layoutY="232.0" pickOnBounds="true">
+               <effect>
+                  <DropShadow color="#3c3737" />
+               </effect>
+            </ImageView>
+            <AnchorPane fx:id="addpane" layoutX="14.0" layoutY="375.0" opacity="0.79" prefHeight="31.0" prefWidth="414.0" style="-fx-background-color: #6b6b64;">
+               <children>
+                  <Label fx:id="eventAdress" layoutX="102.0" layoutY="9.0" prefHeight="17.0" prefWidth="223.0" text="Adresse">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="605.0" prefHeight="48.0" prefWidth="892.0" style="-fx-background-color: #6b6b64;">
+         <children>
+            <Hyperlink fx:id="Externallink" layoutX="285.0" layoutY="13.0" prefHeight="23.0" prefWidth="421.0" text="external link" textFill="#ffffd6" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="445.0" layoutY="224.0" prefHeight="369.0" prefWidth="435.0">
+         <children>
+            <WebView fx:id="eventWV" layoutX="7.0" layoutY="2.0" prefHeight="269.0" prefWidth="655.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+         <effect>
+            <DropShadow color="#5e5e50" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="890.0" layoutY="104.0" prefHeight="548.0" prefWidth="213.0" style="-fx-background-color: #1c4464;">
+         <children>
+            <Rating fx:id="eventRating" layoutX="19.0" layoutY="24.0" partialRating="true" prefHeight="32.0" prefWidth="148.0" />
+            <JFXButton layoutX="134.0" layoutY="63.0" onAction="#rateAction" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #6b6b64;" text="Rate" textFill="#e7fffe">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="ratingLab" layoutX="52.0" layoutY="80.0" prefHeight="17.0" prefWidth="76.0" text="n,vbc" textFill="#f4f474">
+               <font>
+                  <Font name="Arial Narrow" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="ratel" layoutX="52.0" layoutY="56.0" prefHeight="25.0" prefWidth="60.0" text="10.555/10" textFill="#d8f3fc">
+               <font>
+                  <Font name="Arabic Typesetting" size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="5.0" layoutY="102.0" prefHeight="3.0" prefWidth="204.0" />
+            <ImageView fx:id="companyImg" fitHeight="155.0" fitWidth="151.0" layoutX="32.0" layoutY="179.0" pickOnBounds="true" />
+            <Label fx:id="CompanyName" layoutX="66.0" layoutY="337.0" text="CompanyName" textFill="#dcf57a">
+               <font>
+                  <Font name="Arabic Typesetting" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="eventSector" layoutX="95.0" layoutY="362.0" prefHeight="25.0" prefWidth="60.0" text="Sector" textFill="#dcf57a">
+               <font>
+                  <Font name="Arabic Typesetting" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="eventPhone" layoutX="60.0" layoutY="522.0" text="NumberPhone" textFill="#dcf57a">
+               <font>
+                  <Font name="Arabic Typesetting" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="37.0" layoutY="487.0" prefHeight="17.0" prefWidth="140.0" style="-fx-background-color: #6b6b64;" text="Visit Company's Page" textFill="#dbf55c">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="41.0" layoutY="362.0" prefHeight="25.0" prefWidth="46.0" text="Sector :" textFill="#dcf57a">
+               <font>
+                  <Font name="Arabic Typesetting" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="504.0" prefHeight="25.0" prefWidth="160.0" text="Representative phone n° :" textFill="#dcf57a">
+               <font>
+                  <Font name="Arabic Typesetting" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="eventBanner" fitHeight="135.0" fitWidth="892.0" layoutY="33.0" pickOnBounds="true">
+         <image>
+            <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="33.0" prefWidth="1100.0" style="-fx-background-color: #dcefe0; -fx-border-color: #badec1;" AnchorPane.bottomAnchor="617.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#1e2d4a" />
+         </effect>
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="1060.0" onAction="#close_app">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@css/icons8_Close_Window_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="14.0" layoutY="2.0" onAction="#goBack" text="&lt;&lt;Back" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="durationAnchor" layoutX="829.0" layoutY="33.0" opacity="0.84" prefHeight="71.0" prefWidth="335.0" style="-fx-background-color: #1c4464; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="15.07" radius="6.2925" width="12.1" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="NotSubscribed" layoutY="32.0" prefHeight="618.0" prefWidth="1100.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="31.0">
+         <children>
+            <Pane layoutX="105.0" layoutY="453.0" opacity="0.9" prefHeight="616.0" prefWidth="1098.0" style="-fx-background-color: Black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane layoutY="85.0" prefHeight="432.0" prefWidth="1098.0" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+               <children>
+                  <AnchorPane layoutX="78.0" layoutY="92.0" opacity="0.5" prefHeight="432.0" prefWidth="1098.0" style="-fx-background-color: #1c4464;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="cdAnchor" layoutX="447.0" layoutY="192.0" prefHeight="48.0" prefWidth="204.0" />
+                  <JFXButton fx:id="participatebutt" layoutX="513.0" layoutY="284.0" onAction="#participate" style="-fx-background-color: #1c4464;" text="Participate" textFill="#dcefe0">
+                     <font>
+                        <Font name="Arial Narrow" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+.spacer{
+    margin-top: 60px;
+}
+.image{
+    margin-top: 50px;
+    margin-left: 40%;
+    size: ledger;
+}
+.lb{
+    margin-left: 50px;
+}
+.ali{
+    margin-left: 40%;
+}
+.thumbnail{
+    width: 100%;
+    overflow: hidden;
+}
+.naruto{
+    -webkit-transition: all 0.5s ease;
+}
+.naruto:hover{
+    transform: scale(1.3);
+}
+ul{
+    padding: 0;
+    position: relative;
+    width: 100%;
+    margin: 10px 10px 30px;
+}
+ul li{
+    list-style: none;
+    float: left;
+    padding: 10px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-right: 15px;
+    font-family: Arial;
+    text-transform: uppercase;
+}
+.active:hover{
+    background: #fff;
+    color: #262626;
+}
+.back{
+    margin: 0;
+    padding: 0;
+}
+.backgroundimg{
+    background-image: url(../images/login.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+.log{
+    margin-top: 13%;
+    margin-left: 37%;
+}
+.precouleur{
+    font-size: xx-large;
+    font-family: Chiller;
+    color: red;
+    font-weight: bold;
+}
+.blo{
+    color: dodgerblue;
+    font-family: "Matura MT Script Capitals";
+}

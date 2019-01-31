@@ -1,0 +1,261 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	template="/template/dashboardTemp.xhtml">
+
+	<ui:define name="PageContent">
+
+		<div class="w3-display-container w3-card" style="width: 100%">
+
+			<img
+				src="http://localhost:18080/esprit1718b2eventmanagement-web/image?id=#{eventDetailBean.specialEvent.id}"
+				class="w3-grayscale-min w3-hover-grayscale"
+				style="width: 100%; height: 400px;" />
+			<div class="w3-padding w3-display-topleft w3-text-light-blue">
+				<p class="w3-tag w3-text-light-blue w3-animate-fading">
+					<b>. </b>
+					<h:outputText value="#{eventDetailBean.specialEvent.category}" />
+				</p>
+			</div>
+			<div class="w3-padding w3-display-topright">
+				<div class="w3-panel w3-rightbar w3-hover-border-blue">
+					<form method="post" action="uploadServlet"
+						enctype="multipart/form-data">
+						<h4 class="w3-text-light-blue">Want to change your banner?</h4>
+						<hr class="w3-pale-blue"></hr>
+						<input type="text" value="#{eventDetailBean.specialEvent.id}"
+							name="pid" hidden="hidden" /> <input type="file"
+							class="w3-text-light-blue" name="photo" /> <input
+							class="w3-light-blue" style="height: 20px; width: 230px"
+							type="submit" value="Save" />
+					</form>
+				</div>
+			</div>
+			<div class="w3-padding w3-display-right">
+				<h:form>
+					<h:commandButton class="w3-button w3-black" value="#{eventDetailBean.stramlab}"
+						actionListener="#{forTheStreamBean.doStream}"></h:commandButton>
+				</h:form>
+			</div>
+			<div class="w3-padding w3-display-topmiddle">
+				<h1 class="w3-jumbo w3-animate-top w3-wide w3-text-light-blue">
+					<h:outputText value="#{eventDetailBean.specialEvent.name}" />
+				</h1>
+			</div>
+			<div class=" w3-display-middle" style="width: 90%; height: 300px;">
+				<div id="particles-js"></div>
+			</div>
+
+
+			<div
+				class="w3-container w3-light-blue w3-leftbar w3-rightbar w3-border-blue">
+
+				<div class="w3-padding w3-cell-row">
+
+					<div class="w3-cell w3-container">
+						<h4>
+							<b>Details</b>
+						</h4>
+						<hr></hr>
+						<br></br>
+						<p>
+							<b>Title :</b>
+							<h:outputText value="#{eventDetailBean.specialEvent.name}" />
+						</p>
+						<p>
+							<b>About this event :</b>
+							<h:outputText value="#{eventDetailBean.specialEvent.description}" />
+						</p>
+						<p>
+							<b>Sector :</b>
+							<h:outputText value="#{eventDetailBean.specialEvent.eventSector}" />
+						</p>
+						<p>
+							<b>Price :</b>
+							<h:outputText value="#{eventDetailBean.specialEvent.price} $" />
+						</p>
+						<p>
+							<b>Visits :</b>
+							<h:outputText
+								value="#{eventDetailBean.specialEvent.visits} visit" />
+						</p>
+						<p>
+							<b>Rating :</b>
+							<h:outputText value="#{eventDetailBean.specialEvent.rating}" />
+						</p>
+						<p>
+							<b>From :</b>
+							<h:outputText value="#{eventDetailBean.specialEvent.startDate}" />
+							at
+							<h:outputText value="#{eventDetailBean.specialEvent.startTime}" />
+						</p>
+						<p>
+							<b>To :</b>
+							<h:outputText value="#{eventDetailBean.specialEvent.endDate}" />
+							at
+							<h:outputText value="#{eventDetailBean.specialEvent.endTime}" />
+
+						</p>
+					</div>
+					<div class="w3-cell-top w3-center w3-container">
+						<img
+							src="http://maps.googleapis.com/maps/api/staticmap?center=#{eventDetailBean.specialEvent.address}&amp;size=640x400&amp;style=element:labels|visibility:on&amp;style=element:geometry.stroke|visibility:true&amp;style=feature:landscape|element:geometry|saturation:0&amp;style=feature:water|saturation:-30|invert_lightness:true&amp;key=AIzaSyC8rzeQPxgxM-3MVB6qHXZmEZ-XqU38sVI"
+							class="w3-grayscale-min w3-hover-grayscale"
+							style="height: 260px; width: 400px" />
+						<div class="w3-display-container ">
+							<h2 class="w3-opacity">
+								<h:outputText value="#{eventDetailBean.specialEvent.address}" />
+							</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript"
+			src="#{request.contextPath}/resources/js/particles.js" />
+		<script type="text/javascript"
+			src="#{request.contextPath}/resources/js/app.js" />
+
+		<br></br>
+		<h4>Subscribers :</h4>
+
+		<br></br>
+		<div class="w3-twothird">
+			<h:form>
+				<p:dataTable id="tbl" var="e" value="#{eventDetailBean.subs}"
+					paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+					paginator="true" rows="10" style="margin-bottom:20px">
+
+					<f:facet name="{Exporters}">
+
+
+						<h:commandLink>
+							<p:graphicImage value="/resources/img/pdf.png" width="24" />
+							<p:dataExporter type="pdf" target="tbl"
+								fileName="#{eventDetailBean.specialEvent.name}" />
+						</h:commandLink>
+
+						<h:commandLink>
+							<p:graphicImage value="/resources/img/csv.png" width="24" />
+							<p:dataExporter type="csv" target="tbl"
+								fileName="#{eventDetailBean.specialEvent.name}" />
+						</h:commandLink>
+
+						<h:commandLink>
+							<p:graphicImage value="/resources/img/xml.png" width="24" />
+							<p:dataExporter type="xml" target="tbl"
+								fileName="#{eventDetailBean.specialEvent.name}" />
+						</h:commandLink>
+					</f:facet>
+
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Name" />
+						</f:facet>
+						<h:outputText value="#{e.name}" />
+					</p:column>
+
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Job Title" />
+						</f:facet>
+						<h:outputText value="#{e.jobtitle}" />
+					</p:column>
+
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Phone number" />
+						</f:facet>
+						<h:outputText value="#{e.phone}" />
+					</p:column>
+
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Email" />
+						</f:facet>
+						<h:outputText value="#{e.email}" />
+					</p:column>
+				</p:dataTable>
+
+
+			</h:form>
+			<div class="w3-margin w3-pannel">
+
+				<br></br> <br></br>
+				<hr></hr>
+				<p>Want to invite some other people ?</p>
+				<br></br>
+				<h:form>
+					<p:pickList id="PojoPickList" value="#{eventDetailBean.dissub}"
+						var="e" effect="bounce" itemValue="#{e}" itemLabel="#{e.name}"
+						showSourceControls="true" showTargetControls="true"
+						responsive="true" showSourceFilter="true" showTargetFilter="true"
+						filterMatchMode="contains">
+
+						<f:facet name="sourceCaption">Available</f:facet>
+						<f:facet name="targetCaption">To Invite</f:facet>
+
+
+
+
+						<p:column style="width:90%;">
+							<h:outputText value="#{e.name}" />
+						</p:column>
+					</p:pickList>
+
+					<p:commandButton id="pojoSubmit" value="Submit"
+						style="margin-top:5px"
+						actionListener="#{eventDetailBean.doInvite}" />
+				</h:form>
+			</div>
+			<h:form rendered="#{forTheStreamBean.toggleStream}">
+				<div class="w3-pannel w3-margin">
+					<hr></hr>
+					<ui:include src="/NewFile.xhtml" />
+
+				</div>
+			</h:form>
+
+
+		</div>
+		<div class=" w3-third">
+
+			<div class="w3-margin-left w3-padding-bottom  w3-card">
+				<img src="#{request.contextPath}/resources/images/bg-02.jpg"
+					alt="Norway" style="height: 100px" />
+				<div class="w3-container w3-center">
+					<br></br>
+					<p>Consult you link ?</p>
+					<a href="#{eventDetailBean.specialEvent.externalLink}"
+						target="__blank"><h:commandButton
+							class="w3-button w3-blue w3-margin glyphicon"
+							value="#{eventDetailBean.specialEvent.externalLink} 	&#xe258;&#xe258;"></h:commandButton></a>
+					<p>Maybe your event Page ?</p>
+
+					<a
+						href="http://localhost:18080/esprit1718b2eventmanagement-web/eventPage.jsf?id=#{eventDetailBean.specialEvent.id}"
+						target="__blank"><h:commandButton
+							class="w3-button w3-blue w3-margin glyphicon" value="GO &#xe258;"></h:commandButton></a>
+
+					<p>Or need to change something ?</p>
+					<h:form><h:commandButton class="w3-button w3-blue w3-margin glyphicon"
+						value="GO &#x270f;" actionListener="#{eventDetailBean.doGotoUpdate}"></h:commandButton></h:form>
+					<br></br>
+					<p>Delete it :( ?</p>
+					<h:form><h:commandButton class="w3-button w3-blue w3-margin glyphicon"
+						value="X &#x270f;" actionListener="#{eventDetailBean.doDeleteEvent}"></h:commandButton></h:form>
+					<br></br>
+				</div>
+			</div>
+
+		</div>
+
+	</ui:define>
+
+
+</ui:composition>

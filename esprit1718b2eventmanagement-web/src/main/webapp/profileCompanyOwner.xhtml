@@ -1,0 +1,90 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/dashboardTemp.xhtml">
+
+	<ui:define name="PageContent">
+		<center>
+			<br></br>
+			<h:graphicImage height="300" width="300"
+				value="http://localhost:18080/esprit1718b2eventmanagement-web/userpic?id=#{identity.user.id}">
+			</h:graphicImage>
+			<br></br>	<br></br>
+			<form action="haja" method="post" enctype="multipart/form-data">
+				<input hidden="hidden" type="text" name="co" value="#{identity.user.id}" />
+				
+				<input class="w3-button w3-black w3-border w3-large" style="font-size: 15px" type="file" name="pic"></input>
+				<br></br>
+				<input class="w3-button w3-black w3-border w3-large"  value="Update Image" style="font-size: 15px"  type="submit" />
+			</form>
+			<h:form class="w3-container">
+
+
+				<h:panelGrid columns="4" rules="groups"
+					style="margin-bottom:15px; margin:50px ">
+
+					<h3 class="w3-margin "> Name :</h3>
+
+					<h:inputText style="font-size: 15px" value="#{profileCompanyOwner.companyRep.name}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> Username :</h3>
+
+					<h:inputText style="font-size: 15px" disabled="true" value="#{profileCompanyOwner.companyRep.login}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> Country :</h3>
+
+					<h:inputText style="font-size: 15px" value="#{profileCompanyOwner.companyRep.country}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> State :</h3>
+
+					<h:inputText style="font-size: 15px" value="#{profileCompanyOwner.companyRep.state}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> ZipCode :</h3>
+
+					<h:inputText style="font-size: 15px" value="#{profileCompanyOwner.companyRep.zipCode}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> Street :</h3>
+
+					<h:inputText style="font-size: 15px" value="#{profileCompanyOwner.companyRep.street}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> Email :</h3>
+
+					<h:inputText style="font-size: 15px" value="#{profileCompanyOwner.companyRep.email}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> Phone Number :</h3>
+
+					<h:inputText style="font-size: 15px" value="#{profileCompanyOwner.companyRep.phone}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> Job title :</h3>
+
+					<h:inputText style="font-size: 15px" value="#{profileCompanyOwner.companyRep.jobtitle}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> Departement :</h3>
+
+					<h:inputText style="font-size: 15px" value="#{profileCompanyOwner.companyRep.department}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> Work Phone :</h3>
+
+					<h:inputText style="font-size: 15px"  value="#{profileCompanyOwner.companyRep.workPhone}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin"> Description :</h3>
+
+					<h:inputTextarea style="font-size: 15px"  value="#{profileCompanyOwner.companyRep.description}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputTextarea>
+				</h:panelGrid>
+
+				<h3 class="w3-margin">Birthday :</h3>
+				<p:calendar style="font-size: 15px" id="effect" effect="explode"  value="#{profileCompanyOwner.companyRep.birthdate}" />
+				<br></br>
+				<br></br>
+				<br></br>
+				<h:commandButton value="Update"
+					actionListener="#{profileCompanyOwner.update}"
+					class="w3-button w3-black w3-border w3-large"></h:commandButton>
+
+			</h:form>
+		</center>
+	</ui:define>
+</ui:composition>

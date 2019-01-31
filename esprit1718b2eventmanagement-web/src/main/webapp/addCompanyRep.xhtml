@@ -1,0 +1,62 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/dashboardTemp.xhtml"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="PageContent">
+		<h:form>
+			<center>
+				<h:panelGrid columns="4" rules="groups"
+					style="margin-bottom:15px; margin:50px ">
+
+					<h3 class="w3-margin "> Name :</h3>
+
+					<h:inputText style="font-size: 15px"
+						value="#{companyRepBean.companyRep.name}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+
+					<h3 class="w3-margin "> Username :</h3>
+
+					<h:inputText style="font-size: 15px"
+						value="#{companyRepBean.companyRep.login}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+					<h3 class="w3-margin "> Email :</h3>
+
+					<h:inputText style="font-size: 15px"
+						value="#{companyRepBean.companyRep.email}"
+						class="w3-margin w3-input w3-border w3-hover-blue"
+						validatorMessage="insert a correct mail">
+						<f:validateRegex
+							pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+					</h:inputText>
+					<h3 class="w3-margin "> Password :</h3>
+
+					<h:inputText style="font-size: 15px"
+						value="#{companyRepBean.companyRep.password}"
+						class="w3-margin w3-input w3-border w3-hover-blue"></h:inputText>
+
+				</h:panelGrid>
+				<h3 class="w3-margin "> Money Amount Per Hour :</h3>
+
+				<h:inputText style="font-size: 15px ;  width:20%  "
+					value="#{companyRepBean.companyRep.hourPrice}"
+					class=" w3-input w3-border w3-hover-blue">
+
+				</h:inputText>
+				<br></br>
+				<br></br>
+				<h:commandButton value="add" type="submit"
+					actionListener="#{companyRepBean.doAdder}"
+					class="w3-button w3-black w3-border w3-large"></h:commandButton>
+				<h:outputScript rendered="#{companyRepBean.undeleatable}">
+  					  alert("Username is taken ");
+					</h:outputScript>
+					<h:outputScript rendered="#{companyRepBean.youDidIt}">
+  					  alert("User Created And An Email Has been Sent ");
+					</h:outputScript>
+			</center>
+		</h:form>
+	</ui:define>
+</ui:composition>

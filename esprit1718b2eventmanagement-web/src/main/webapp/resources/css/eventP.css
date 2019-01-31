@@ -1,0 +1,17 @@
+#m {
+	font-family: arial black;
+	font-size: 50px;
+	color: white;
+	margin: 0px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+headerr{
+	position: fixed;
+	 z-index: 1;
+	
+	
+	
+}
+

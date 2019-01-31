@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.exhibHall.infoBoothController">
+   <children>
+      <Pane prefHeight="34.0" prefWidth="900.0" style="-fx-background-color: #b4dcbb;" />
+      <ImageView fitHeight="442.0" fitWidth="464.0" layoutX="459.0" layoutY="34.0" opacity="0.22" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../EM/css/6726.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="442.0" fitWidth="534.0" layoutX="-4.0" layoutY="33.0" opacity="0.22" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../EM/css/6726.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutY="33.0" prefHeight="362.0" prefWidth="900.0">
+         <children>
+            <ImageView fitHeight="547.0" fitWidth="662.0" layoutX="118.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../EM/css/booth11.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="6.0" opacity="0.56" prefHeight="41.0" prefWidth="255.0" style="-fx-background-radius: 20; -fx-background-color: #dae3e8;">
+               <children>
+                  <Label fx:id="namel" layoutX="83.0" layoutY="-12.0" text="Label">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="2.0" layoutY="-9.0" prefHeight="66.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #dae3e8;">
+               <children>
+                  <Label layoutX="28.0" layoutY="5.0" prefHeight="41.0" prefWidth="33.0" text="i" underline="true">
+                     <font>
+                        <Font name="Nyala" size="53.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.73" />
+                     </effect>
+                  </Label>
+               </children>
+            </Pane>
+            <BorderPane fx:id="imageholder" layoutX="266.0" layoutY="73.0" prefHeight="172.0" prefWidth="379.0" />
+         </children>
+      </Pane>
+      <AnchorPane fx:id="contentpane" layoutY="513.0" prefHeight="319.0" prefWidth="900.0">
+         <children>
+            <Pane fx:id="panep" opacity="0.58" prefHeight="319.0" prefWidth="900.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane fx:id="web" layoutX="25.0" layoutY="64.0" prefHeight="230.0" prefWidth="319.0" style="-fx-background-color: #92e8a1; -fx-border-color: #7abf86; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <children>
+                  <Label fx:id="compane" layoutX="19.0" layoutY="18.0" prefHeight="37.0" prefWidth="187.0" underline="true">
+                     <font>
+                        <Font name="Arabic Typesetting" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="comdesc" layoutX="7.0" layoutY="75.0" prefHeight="155.0" prefWidth="281.0">
+                     <font>
+                        <Font name="Arabic Typesetting" size="27.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="eventsp" layoutX="363.0" layoutY="67.0" prefHeight="230.0" prefWidth="386.0" style="-fx-background-color: #92e8a1; -fx-border-color: #7abf86; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <children>
+                  <Label layoutX="13.0" layoutY="7.0" prefHeight="37.0" prefWidth="187.0" text="Associated Events:">
+                     <font>
+                        <Font name="Arabic Typesetting" size="27.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableev" layoutX="14.0" layoutY="43.0" prefHeight="172.0" prefWidth="359.0" style="-fx-background-color: #efec92; -fx-border-radius: 20;">
+                    <columns>
+                      <TableColumn fx:id="namecol" editable="false" prefWidth="127.0" text="Event Name" />
+                      <TableColumn fx:id="descol" editable="false" minWidth="0.0" prefWidth="231.0" text="Description" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Separator layoutX="350.0" layoutY="71.0" orientation="VERTICAL" prefHeight="230.0" prefWidth="5.0" />
+            <Pane fx:id="rating" layoutX="820.0" layoutY="64.0" prefHeight="245.0" prefWidth="41.0" />
+            <JFXButton fx:id="ypbutton" contentDisplay="GRAPHIC_ONLY" layoutX="-2.0" layoutY="-3.0" onAction="#goup" opacity="0.71" prefHeight="37.0" prefWidth="900.0" style="-fx-background-color: #efec92;">
+               <graphic>
+                  <ImageView fx:id="iv" fitHeight="29.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+                     <image>
+                        <Image url="@../EM/css/icons8-next-page-64.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <Label fx:id="note" layoutX="811.0" layoutY="35.0" prefHeight="17.0" prefWidth="88.0" text="test">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <JFXButton layoutX="756.0" layoutY="455.0" onAction="#returnb" prefHeight="42.0" prefWidth="96.0" text="return" underline="true">
+         <font>
+            <Font name="Arabic Typesetting" size="21.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

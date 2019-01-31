@@ -1,0 +1,120 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	template="/template/dashboardTemp.xhtml">
+
+
+
+	<ui:define name="PageContent">
+		<header class="w3-container" style="padding-top: 22px">
+
+			<h5>
+				<b><i class="fa fa-dashboard"></i> My Event's Room</b>
+			</h5>
+		</header>
+
+		<div class="w3-row-padding w3-margin-bottom">
+			<div class="w3-quarter w3-animate-zoom">
+				<h:form>
+				<h:commandLink class="w3-red" actionListener="#{eventBackbean.doGoToMR}">
+				<div class="w3-container w3-red w3-hover-pale-red w3-padding-16">
+					<div class="w3-left">
+						<i class="fa fa-star w3-xxxlarge"></i>
+					</div>
+					<div class="w3-right">
+					
+						<h3><h:outputText value ="#{eventBackbean.mostRated.rating}"/></h3>
+					</div>
+					<div class="w3-clear"></div>
+					<p>Most Rated</p>
+					<h4><h:outputText value ="#{eventBackbean.mostRated.name}"/>
+					
+					</h4>
+				</div>
+				</h:commandLink>
+				</h:form>
+			</div>
+			<div class="w3-quarter w3-animate-zoom">
+			<h:form>
+				<h:commandLink class="w3-red" actionListener="#{eventBackbean.doGoToMV}">
+				<div class="w3-container w3-blue w3-hover-pale-blue w3-padding-16">
+					<div class="w3-left">
+						<i class="fa fa-eye w3-xxxlarge"></i>
+					</div>
+					<div class="w3-right">
+						<h3><h:outputText value ="#{eventBackbean.mostVisited.visits}"/></h3>
+					</div>
+					<div class="w3-clear"></div>
+					<p>Most Visits</p>
+					<h4><h:outputText value ="#{eventBackbean.mostVisited.name}"/></h4>
+				</div>
+				</h:commandLink>
+				</h:form>
+			</div>
+			<div class="w3-quarter w3-animate-zoom">
+			<h:form>
+				<h:commandLink class="w3-red" actionListener="#{eventBackbean.doGoToMS}">
+				<div class="w3-container w3-teal  w3-hover-light-blue w3-padding-16">
+					<div class="w3-left">
+						<i class="	fa fa-heart w3-xxxlarge"></i>
+					</div>
+					<div class="w3-right">
+						<h3><h:outputText value ="#{eventBackbean.ms}"/></h3>
+					</div>
+					<div class="w3-clear"></div>
+						<p>Most Subs</p>
+					<h4><h:outputText value ="#{eventBackbean.mostSubs.name}"/></h4>
+				</div>
+				</h:commandLink>
+				</h:form>
+			</div>
+			<div class="w3-quarter w3-animate-zoom">
+				<div
+					class="w3-container w3-green w3-hover-pale-green w3-text-white w3-padding-16">
+					<div class="w3-left">
+						<i class="fa fa-users w3-xxxlarge"></i>
+					</div>
+					<div class="w3-right">
+						<h3><h:outputText value="#{eventBackbean.eNum}"/></h3>
+					</div>
+					<div class="w3-clear"></div>
+					<p>your total</p>
+					<h4>Events</h4>
+				</div>
+			</div>
+		</div>
+		<h:form>
+			<div class="w3-display-container">
+				<h:commandButton
+					class="w3-button w3-xlarge w3-circle w3-red w3-card-4 w3-display-right w3-margin"
+					style="width:50px;" actionListener="#{eventBean.doGotoAddEvent}"
+					value="+"></h:commandButton>
+			</div>
+		</h:form>
+		<br></br>
+		<div class="w3-margin">
+			<h:form>
+
+
+
+				<h3>Events Schedule</h3>
+				<p:schedule value="#{eventBackbean.lazyEventModel}">
+					<p:ajax event="eventSelect"
+						listener="#{eventBackbean.onEventSelect}" />
+
+				</p:schedule>
+
+
+
+			</h:form>
+
+		</div>
+
+
+
+
+	</ui:define>
+</ui:composition>

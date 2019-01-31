@@ -1,0 +1,47 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/dashboardTemp.xhtml"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="PageContent">
+		<h:form>
+		<br></br><br></br>
+		<h2>Users Info:</h2>
+		<br></br>
+			<center>
+				<p:dataTable style="font-size: 15px;width:100%" var="car"
+					value="#{companyRepBean.reps1}">
+					<p:column headerText="Name">
+						<h:outputText value="#{car.name}" />
+					</p:column>
+
+					<p:column headerText="Country">
+						<h:outputText value="#{car.country}" />
+					</p:column>
+
+					<p:column headerText="Email">
+						<h:outputText value="#{car.email}" />
+					</p:column>
+
+					<p:column headerText="Hour Price">
+						<h:outputText value="#{car.hourPrice}" />
+					</p:column>
+
+					<p:column headerText="Hours Spent">
+						<h:outputText value="#{car.hoursSpent}" />
+					</p:column>
+					
+					
+				</p:dataTable>
+				<p:dataTable style="font-size: 15px;width:100%" var="car"
+					value="#{companyRepBean.moneey}">
+				<p:column headerText="Total Amount">
+						<h:outputText value="#{car}" />
+					</p:column>
+				</p:dataTable>
+			</center>
+		</h:form>
+	</ui:define>
+</ui:composition>

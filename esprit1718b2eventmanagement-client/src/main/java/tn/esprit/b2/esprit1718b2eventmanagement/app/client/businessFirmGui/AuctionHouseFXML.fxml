@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #b4dcbc;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.businessFirmGui.AuctionHouseFXMLController">
+   <children>
+      <AnchorPane prefHeight="158.0" prefWidth="1100.0" style="-fx-background-color: #1c4464;">
+         <children>
+            <JFXButton fx:id="Bid_search" layoutX="787.0" layoutY="32.0" onAction="#BidSearch" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #f4f464;" text="Search ">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </JFXButton>
+            <Text fill="WHITE" layoutX="295.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date " wrappingWidth="60.185546875">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="Go_Back" layoutX="932.0" layoutY="32.0" onAction="#Go_Back" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #f4f464;" text="Back">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </JFXButton>
+            <Text fill="WHITE" layoutX="33.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="60.185546875">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="Bid_find_name" layoutX="103.0" layoutY="35.0" style="-fx-background-color: #f4f464;" />
+            <JFXTextField fx:id="Bid_find_price" layoutX="103.0" layoutY="87.0" style="-fx-background-color: #f4f464;" />
+            <Text fill="WHITE" layoutX="33.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" wrappingWidth="60.185546875">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="Bid_find_seller" layoutX="366.0" layoutY="35.0" style="-fx-background-color: #f4f464;" />
+            <Text fill="WHITE" layoutX="295.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seller" wrappingWidth="60.185546875">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="609.0" prefHeight="41.0" prefWidth="1100.0" style="-fx-background-color: #1c4464;">
+         <children>
+            <Text fill="WHITE" layoutX="476.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Browse auction" wrappingWidth="148.185546875">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="Bid_table" layoutX="35.0" layoutY="186.0" prefHeight="404.0" prefWidth="741.0" style="-fx-background-color: #f4f499;">
+        <columns>
+          <TableColumn fx:id="Bid_Product" prefWidth="102.0" text="Product" />
+          <TableColumn fx:id="Bid_start" prefWidth="171.0" text="Bid_amount" />
+            <TableColumn fx:id="Bid_buyout" prefWidth="161.0" text="Buyout" />
+            <TableColumn fx:id="Bid_seller" prefWidth="152.0" text="Seller" />
+            <TableColumn fx:id="Bid_timeleft" prefWidth="158.0" text="Time left" />
+            <TableColumn fx:id="Bid_id" prefWidth="75.0" text="bid_id" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="836.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f4f499;">
+         <children>
+            <Text layoutX="61.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Bid" wrappingWidth="77.185546875">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="Bid_yourbid" layoutX="17.0" layoutY="69.0" />
+            <JFXButton fx:id="Bid_bid" layoutX="39.0" layoutY="134.0" onAction="#MakeBid" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #1c4464;" text="Bid" textFill="#f2f2f2">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="868.0" layoutY="549.0" onAction="#Bid_Buyout" prefHeight="36.0" prefWidth="136.0" style="-fx-background-color: #f4f464;" text="Buyout">
+         <font>
+            <Font name="Berlin Sans FB" size="22.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="CounterDown" layoutX="799.0" layoutY="402.0" prefHeight="132.0" prefWidth="275.0">
+         <children>
+            <GridPane prefHeight="132.0" prefWidth="275.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="70.0" prefWidth="275.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <GridPane layoutX="11.0" layoutY="6.0" prefHeight="82.0" prefWidth="282.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.33331298828125" minWidth="10.0" prefWidth="71.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="204.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="82.0" prefWidth="79.0" style="-fx-background-color: #1c4464;">
+                                 <children>
+                                    <ImageView fx:id="ImageOr" fitHeight="54.0" fitWidth="66.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../../../../../../../../../../../../../../../../../pngs/c091629800ce3d91d8527d32d60bc46f-stopwatch-timer-by-vexels.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="ImageGreen" fitHeight="53.0" fitWidth="63.0" layoutX="9.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../../../../../../../../../../../../../../../../../pngs/timer.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="ImageRed" fitHeight="54.0" fitWidth="56.0" layoutX="10.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../../../../../../../../../../../../../../../../../pngs/timepiece-512.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #9aabab;">
+                                       <children>
+                                          <GridPane layoutX="-14.0" layoutY="-10.0" prefHeight="80.0" prefWidth="204.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="67.5" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <GridPane prefHeight="52.0" prefWidth="204.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                      <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="12.5" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="47.5" minHeight="10.0" prefHeight="46.5" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </GridPane.margin>
+                                                         <children>
+                                                            <Text fx:id="HoursTimer" layoutX="-2.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" wrappingWidth="203.7734375">
+                                                               <font>
+                                                                  <Font name="Berlin Sans FB" size="40.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </GridPane.margin>
+                                                         <children>
+                                                            <Text fx:id="MinuitsTimer" layoutX="2.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" wrappingWidth="142.0">
+                                                               <font>
+                                                                  <Font name="Berlin Sans FB" size="40.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </GridPane.margin>
+                                                         <children>
+                                                            <Text fx:id="SecondsTimer" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" wrappingWidth="95.546875">
+                                                               <font>
+                                                                  <Font name="Berlin Sans FB" size="40.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hours" GridPane.halignment="CENTER">
+                                                         <font>
+                                                            <Font name="Berlin Sans FB" size="13.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text layoutX="30.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minuits" wrappingWidth="44.29541015625" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                                                         <font>
+                                                            <Font name="Berlin Sans FB" size="13.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text layoutX="78.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seconds" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                                                         <font>
+                                                            <Font name="Berlin Sans FB" size="13.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton onAction="#BidNow" prefHeight="36.0" prefWidth="136.0" style="-fx-background-color: #1c4464;" text="Bid Now" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="1100.0" style="-fx-background-color: #1c4464;" AnchorPane.bottomAnchor="619.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1053.0" layoutY="-1.0" onAction="#Go_out" prefHeight="31.0" prefWidth="32.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gui/EM/css/icons8_Close_Window_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="#{request.contextPath}images/icons/favicon.png" />
+
+<title><ui:insert name="pageTitle" /></title>
+<!-- Bootstrap core CSS -->
+<link
+	href="#{request.contextPath}/resources/css/BankCss/bootstrap.min.css"
+	rel="stylesheet" />
+<link
+	href="#{request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css" />
+<!-- Custom styles for this template -->
+<link href="#{request.contextPath}/resources/css/BankCss/style.css"
+	rel="stylesheet" />
+<link
+	href="#{request.contextPath}/resources/fonts/antonio-exotic/stylesheet.css"
+	rel="stylesheet" />
+<link rel="stylesheet"
+	href="#{request.contextPath}/resources/css/BankCss/lightbox.min.css" />
+<link
+	href="#{request.contextPath}/resources/css/BankCsscss/responsive.css"
+	rel="stylesheet" />
+<link rel="stylesheet"
+	href="#{request.contextPath}/resources/css/BankCss/style2.css" />
+
+<script src="#{request.contextPath}/resources/js/BankJs/jquery.min.js"
+	type="text/javascript"></script>
+
+<script
+	src="#{request.contextPath}/resources/js/BankJs/bootstrap.min.js"
+	type="text/javascript"></script>
+
+<script
+	src="#{request.contextPath}/resources/js/BankJs/lightbox-plus-jquery.min.js"
+	type="text/javascript"></script>
+
+<script
+	src="#{request.contextPath}/resources/js/BankJs/instafeed.min.js"
+	type="text/javascript"></script>
+
+<script src="#{request.contextPath}/resources/js/BankJs/custom.js"
+	type="text/javascript"></script>
+
+</head>
+<body>
+	<div id="page">
+
+		<div class="top-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6"></div>
+					<div class="col-md-6">
+						<div class="social-grid">
+							<ul class="list-unstyled text-right">
+								<li><a><i class="fa fa-facebook"></i></a></li>
+								<li><a><i class="fa fa-twitter"></i></a></li>
+								<li><a><i class="fa fa-linkedin"></i></a></li>
+								<li><a><i class="fa fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<header class="header-container">
+		<div class="container">
+			<div class="top-row">
+				<div class="row">
+					<div class="col-md-2 col-sm-6 col-xs-6">
+						<div id="logo">
+
+							<a href="home.html"><span>Orion</span>Bank</a>
+						</div>
+					</div>
+					<div class="col-sm-6 visible-sm">
+						<div class="text-right">
+							<button type="button" class="book-now-btn">Auction House</button>
+						</div>
+					</div>
+					<div class="col-md-8 col-sm-12 col-xs-12 remove-padd">
+						<nav class="navbar navbar-default">
+						<div class="navbar-header page-scroll">
+							<button data-target=".navbar-ex1-collapse" data-toggle="collapse"
+								class="navbar-toggle" type="button">
+								<span class="sr-only">Toggle navigation</span> <span
+									class="icon-bar"></span> <span class="icon-bar"></span> <span
+									class="icon-bar"></span>
+							</button>
+
+						</div>
+						<div
+							class="collapse navigation navbar-collapse navbar-ex1-collapse remove-space">
+							<ul class="list-unstyled nav1 cl-effect-10">
+								<li><a data-hover="Home" href="Bank.jsf"><span>Account</span></a></li>
+								<li><a data-hover="Our_Bank" href="Bankaccount.jsf"><span>About
+											Us</span></a></li>
+								<li><a data-hover="Transferts" href="bankTransfert.jsf"><span>Transfers</span></a></li>
+								<li><a data-hover="My Wallet" class="active"><span>My
+											Wallet</span></a></li>
+								<li><a data-hover="Contact_Us" href="BankAssistance.jsf"><span>Assistance</span></a></li>
+							</ul>
+
+						</div>
+						</nav>
+					</div>
+					<div class="col-md-2  col-sm-4 col-xs-12 hidden-sm">
+						<div class="text-right">
+							<a href="Auctionhousehome.jsf"><button type="button" class="book-now-btn">Auction House</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</header>
+	</div>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<div id="wrapper">
+
+		<div id="container">
+
+			<div id="info">
+
+				<img id="product"
+					src="https://i.pinimg.com/originals/43/71/ac/4371ac170ad499f40feebabc68b00017.png"
+					alt="" /> <br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<p>Activity Bracelet Surge</p>
+
+
+
+				<div id="price">
+					<p>
+						Your current Credit is :
+						<h:outputText value="#{identity.user.bankAccounts.credit} $">
+						</h:outputText>
+					</p>
+
+				</div>
+			</div>
+
+			<div id="payment">
+				<form id="checkout">
+					<input class="card" id="visa" type="button" name="card" value="" />
+					<input class="card" id="mastercard" type="button" name="card"
+						value="" /> <label>Credit Card Number</label> <input
+						id="cardnumber" type="text" pattern="[0-9]{13,16}"
+						name="cardnumber" requierd="true"
+						placeholder="0123-4567-8901-2345" /> <label>Card Holder</label> <input
+						id="cardholder" type="text" name="name" requierd="true"
+						maxlength="50" placeholder="Cardholder" /> <label>Expiration
+						Date</label> <label id="cvc-label">CVC/CVV</label>
+
+					<div id="left">
+						<select name="month" id="month" onchange="" size="1">
+
+							<option value="00">MM</option>
+
+							<option value="01">01</option>
+
+							<option value="02">02</option>
+
+							<option value="03">03</option>
+
+							<option value="04">04</option>
+
+							<option value="05">05</option>
+
+							<option value="06">06</option>
+
+							<option value="07">07</option>
+
+							<option value="08">08</option>
+
+							<option value="09">09</option>
+
+							<option value="10">10</option>
+
+							<option value="11">11</option>
+
+							<option value="12">12</option>
+						</select>
+
+						<p>/</p>
+						<select name="year" id="year" onchange="" size="1">
+
+							<option value="00">YY</option>
+
+							<option value="01">16</option>
+
+							<option value="02">17</option>
+
+							<option value="03">18</option>
+
+							<option value="04">19</option>
+
+							<option value="05">20</option>
+
+							<option value="06">21</option>
+
+							<option value="07">22</option>
+
+							<option value="08">23</option>
+
+							<option value="09">24</option>
+
+							<option value="10">25</option>
+						</select>
+					</div>
+					<input id="cvc" type="text" placeholder="Cvc/Cvv" maxlength="3" />
+					<input class="btn" type="button" name="Fill My Wallet"
+						value="Fill My Wallet" />
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

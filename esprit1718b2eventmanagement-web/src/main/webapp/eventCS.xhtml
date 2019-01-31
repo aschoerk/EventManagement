@@ -1,0 +1,112 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+
+	<meta charset="UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Raleway" />
+	<style>
+body, h1 {
+	font-family: "Raleway", sans-serif
+}
+
+body, html {
+	height: 100%
+}
+
+.bgimg {
+	background-image:
+		url("http://localhost:18080/esprit1718b2eventmanagement-web/image?id=#{eventPageBean.specialEvent.id}");
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+div#corner-triangle {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-width: 0 200px 200px 0;
+  border-color: transparent 
+#1c4464 transparent transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  color: white;
+  text-shadow: 0 0 25px 9px #fff;
+  -webkit-filter: drop-shadow(0 1px 9px #000000);
+  filter: drop-shadow(0 1px 9px #000000);
+}
+div#corner-triangle .corner-triangle-text {
+  position: relative;
+  font-size: 2.1em;
+  top: 0;
+  right: -90px;
+  font-family: sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-weight: 200;
+  line-height: 1.1;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+div#corner-triangle .corner-triangle-text span.corner-triangle-firstline {
+  margin-left: 29px;
+}
+div#corner-triangle .corner-triangle-text a {
+  color: white;
+}
+div#corner-triangle .corner-triangle-text a:hover,
+div#corner-triangle .corner-triangle-text a:link,
+div#corner-triangle .corner-triangle-text a:visited,
+div#corner-triangle .corner-triangle-text a:active,
+div#corner-triangle .corner-triangle-text a:focus {
+  text-decoration: none;
+}
+</style>
+
+</h:head>
+<h:body>
+
+	<div
+		class="bgimg w3-display-container w3-animate-opacity w3-text-white"><div id="particles-js">
+		<div class="w3-display-topleft w3-padding-large w3-xlarge">
+		
+			<h:outputText value="#{eventPageBean.company.name}" />
+		</div>
+		<div class="w3-display-middle">
+			<p class="w3-large w3-center">
+				<h:outputText value="#{eventPageBean.specialEvent.name}" />
+			</p>
+			<h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+			<hr class="w3-border-grey" style="margin: auto; width: 40%" />
+			<p class="w3-large w3-center" id="demo"></p>
+		</div>
+		<div class="w3-display-bottomleft w3-padding-large">
+			Powered by <a>Sector's Club <h:form id="form">
+					<h:inputHidden id="htmld"
+						value="#{eventPageBean.specialEvent.startDate}" />
+				</h:form></a>
+		</div>
+		<div class="w3-display-topright w3-padding-large"><div id="corner-triangle">
+	<div class="corner-triangle-text text-capitalize"><a href="#{request.contextPath}/Event.jsf" ><span class="corner-triangle-firstline">Event</span><br/>&#9947;Room</a></div>
+</div></div>
+	</div>
+</div>
+
+
+</h:body>
+<script type="text/javascript"
+	src="#{request.contextPath}/resources/js/eventCS.js" />
+			<script type="text/javascript"
+			src="#{request.contextPath}/resources/js/particles.js" />
+		<script type="text/javascript"
+			src="#{request.contextPath}/resources/js/app.js" />
+</html>

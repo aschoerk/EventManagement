@@ -1,0 +1,121 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	template="/template/eventPageTemplate.xhtml">
+
+	<ui:define name="header">
+		<!-- Header with image -->
+
+		<header
+			class="bgimg w3-display-container w3-grayscale-min w3-animate-top"
+			id="home">
+			<div id="particles-js">
+				<div
+					class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+					<span class="w3-tag">Going from <h:outputText
+							value="#{eventPageBean.specialEvent.startDate}" /> <h:outputText
+							value="#{eventPageBean.specialEvent.startTime}" /> to <h:outputText
+							value="#{eventPageBean.specialEvent.endDate}" /> <h:outputText
+							value="#{eventPageBean.specialEvent.endTime}" />
+					</span>
+				</div>
+				<div class="w3-display-middle w3-center">
+					<span style="font-size: 90px"> <h:outputText
+							value="#{eventPageBean.specialEvent.name}" id="m" />
+					</span>
+				</div>
+				<div
+					class="w3-display-bottomright w3-center w3-padding-large w3-hide-small">
+					<span class="w3-tag"><h:outputText
+							value="#{eventPageBean.specialEvent.address}" /></span>
+				</div>
+			</div>
+		</header>
+
+		<script type="text/javascript"
+			src="#{request.contextPath}/resources/js/particles.js" />
+		<script type="text/javascript"
+			src="#{request.contextPath}/resources/js/app.js" />
+			
+
+	</ui:define>
+	<ui:define name="eventDesc">
+			<h:form rendered="#{forTheStreamBean.toggleStream}">
+				<div class="w3-pannel w3-margin">
+					<hr></hr>
+					<ui:include src="/testinsmt.xhtml" />
+
+				</div>
+			</h:form>
+		<h:outputText value="#{eventPageBean.specialEvent.description}" />
+
+	</ui:define>
+
+	<ui:define name="company">
+		<p>
+			<h:outputText value="#{eventPageBean.specialEvent.category}" />
+		</p>
+		<p>
+			<strong>Hosted by :</strong>
+			<h:outputText value="#{eventPageBean.company.name}" />
+		</p>
+	</ui:define>
+	<ui:define name="moretlo">
+		<p>
+			<strong>Live hours:</strong>from
+			<h:outputText value="#{eventPageBean.specialEvent.startDate}" />
+			<h:outputText value="#{eventPageBean.specialEvent.startTime}" />
+			to
+			<h:outputText value="#{eventPageBean.specialEvent.endDate}" />
+			<h:outputText value="#{eventPageBean.specialEvent.endTime}" />
+		</p>
+		<p>
+			<strong>Address:</strong>
+			<h:outputText value="#{eventPageBean.specialEvent.address}" />
+				</p>		
+	
+
+	</ui:define>
+	<ui:define name="otherevents">
+
+		<p:galleria value="#{eventPageBean.otherSp}" var="s" panelWidth="666"
+			panelHeight="313" showCaption="true" effect="fade" autoPlay="true"
+			effectSpeed="1000" transitionInterval="5000">
+
+			<p:graphicImage
+				value="http://localhost:18080/esprit1718b2eventmanagement-web/image?id=#{s.id}"
+				height="313" width="666" alt="#{s.startDate}	~	 #{s.address}"
+				title="#{s.name}" />
+
+
+
+		</p:galleria>
+
+
+	</ui:define>
+	<ui:define name="ocomp">
+		<div class="w3-display-container w3-text-grey  ">
+
+			<img
+				src="http://localhost:18080/esprit1718b2eventmanagement-web/company?id=#{eventPageBean.company.id}"
+				alt="Norway" style="width: 100%; height: 300px;" />
+			<div class="w3-xlarge w3-display-topright w3-padding">
+				<h:outputText value="#{eventPageBean.company.name}" />
+			</div>
+
+
+		</div>
+		<div class="w3-xlarge w3-padding">
+			<h:outputText value="#{eventPageBean.company.about}" />
+		</div>
+
+	</ui:define>
+<ui:define name="map">
+		<img src="http://maps.googleapis.com/maps/api/staticmap?center=#{eventPageBean.specialEvent.address}&amp;size=640x400&amp;style=element:labels|visibility:on&amp;style=element:geometry.stroke|visibility:true&amp;style=feature:landscape|element:geometry|saturation:0&amp;style=feature:water|saturation:-30|invert_lightness:true&amp;key=AIzaSyC8rzeQPxgxM-3MVB6qHXZmEZ-XqU38sVI"
+							class="w3-grayscale-min w3-hover-grayscale"/>
+
+</ui:define>
+</ui:composition>

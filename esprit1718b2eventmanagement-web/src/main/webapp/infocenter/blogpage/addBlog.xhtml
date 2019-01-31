@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://java.sun.com/jsf/html">
+
+<h:head>
+	<link rel="stylesheet" type="text/css" href="../../infocenter/myCss/bootstrap.min.css" />
+
+</h:head>
+<body>
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h1> Ajout d'un blog</h1>
+		</div>
+		<div class="panel-body">
+			<h:form>
+				<p:panelGrid columns="2">
+					<p:outputText value="NAME:" />
+					<p:inputText value="#{blogBean.blog.name}" />
+					
+					<p:outputText value="COMPANY :"/>
+					<p:selectOneMenu value="#{blogBean.id}">
+		        		<f:selectItem itemLabel="Choose a company" />
+		        		<f:selectItems value="#{blogBean.companys}" var="e" itemLabel="#{e.name}"
+		        				itemValue="#{e.id}" />
+		    		</p:selectOneMenu>
+					
+					<h:commandButton action="#{blogBean.doAddBlog()}" value="Ajouter" />
+				</p:panelGrid>
+			</h:form>
+		</div>
+	</div>
+</body>
+</html>

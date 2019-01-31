@@ -1,0 +1,59 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/dashboardTemp.xhtml"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="PageContent">
+		<center>
+		<h:form>
+			<br></br> <br></br> <br></br> <br></br> <br></br>
+			<h:panelGrid columns="4" rules="groups"
+				style="margin-bottom:15px; margin:50px ">
+				<h3 class="w3-margin "> Booth :</h3>
+				<h:selectOneMenu class="w3-margin w3-input w3-border w3-hover-blue"
+					style="font-size: 15px;width:100%" value="#{companyRepBean.ider}">
+					<f:selectItems var="boo" value="#{companyRepBean.booths}"
+						itemValue="#{boo.id}" itemLabel="#{boo.name}" />
+				</h:selectOneMenu>
+				<h3 class="w3-margin "> Company Representative :</h3>
+				<h:selectOneMenu class="w3-margin w3-input w3-border w3-hover-blue"
+					style="font-size: 15px;width:100%" value="#{companyRepBean.namer}">
+					<f:selectItems var="boo1" value="#{companyRepBean.reps}"
+						itemValue="#{boo1.id}" itemLabel="#{boo1.name}" />
+				</h:selectOneMenu>
+				<h3 class="w3-margin "> Start Date :</h3>
+
+
+				<p:calendar class="w3-margin w3-input w3-border w3-hover-blue"
+					style="font-size: 15px;width:100%" id="effect"
+					value="#{companyRepBean.sDU}" effect="fold" />
+
+				<h3 class="w3-margin "> End Date :</h3>
+
+				
+				     <p:calendar class="w3-margin w3-input w3-border w3-hover-blue"
+					style="font-size: 15px;width:100%" id="effect1"
+					value="#{companyRepBean.eDU}" effect="fold" />
+
+				<h3 class="w3-margin "> Start time :</h3>
+				<p:calendar class="w3-margin w3-input w3-border w3-hover-blue"
+					style="font-size: 15px;width:100%" id="time1"
+					value="#{companyRepBean.st}" pattern="HH:mm" timeOnly="true" />
+
+				<h3 class="w3-margin "> End time :</h3>
+				<p:calendar class="w3-margin w3-input w3-border w3-hover-blue"
+					style="font-size: 15px;width:100%" id="time"
+					value="#{companyRepBean.et}" pattern="HH:mm" timeOnly="true" />
+
+			</h:panelGrid>
+			<br></br> <br></br> <br></br>
+			<h:commandButton value="Add a shift"
+				actionListener="#{companyRepBean.doShifter}"
+				class="w3-button w3-black w3-border w3-large"></h:commandButton>
+
+			</h:form>
+		</center>
+	</ui:define>
+</ui:composition>

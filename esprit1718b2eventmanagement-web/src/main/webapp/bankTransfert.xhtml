@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+	
+<title>Contact V5</title>
+	
+<meta charset="UTF-8" />
+	
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/png" href="#{request.contextPath}/resources/images/icons/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/vendor/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/fonts/iconic/css/material-design-iconic-font.min.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/vendor/animate/animate.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/vendor/css-hamburgers/hamburgers.min.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/vendor/animsition/css/animsition.min.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/vendor/select2/select2.min.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/vendor/daterangepicker/daterangepicker.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/vendor/noui/nouislider.min.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/css/BankCss/util.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/css/BankCss/main.css" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/css/BankCss/Style.css" />
+	
+	
+	
+	  <!-- Bootstrap core CSS -->
+        <link href="#{request.contextPath}/resources/css/BankCss/bootstrap.min.css" rel="stylesheet" />
+        <link href="#{request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Custom styles for this template -->
+        <link href="#{request.contextPath}/resources/css/BankCss/style.css" rel="stylesheet" />
+        <link href="#{request.contextPath}/resources/fonts/antonio-exotic/stylesheet.css" rel="stylesheet" />
+        <link rel="stylesheet" href="#{request.contextPath}/resources/css/BankCss/lightbox.min.css" />
+        <link href="#{request.contextPath}/resources/css/BankCsscss/responsive.css" rel="stylesheet" />
+        
+<script src="#{request.contextPath}/resources/js/BankJs/jquery.min.js" type="text/javascript"></script>
+        
+<script src="#{request.contextPath}/resources/js/BankJs/bootstrap.min.js" type="text/javascript"></script>
+        
+<script src="#{request.contextPath}/resources/js/BankJs/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+        
+<script src="#{request.contextPath}/resources/js/BankJs/instafeed.min.js" type="text/javascript"></script>
+        
+<script src="#{request.contextPath}/resources/js/BankJs/custom.js" type="text/javascript"></script>
+	
+	</head>
+<body>
+	<div id="page">
+         
+            <div class="top-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                          
+                        </div>
+                        <div class="col-md-6">
+                            <div class="social-grid">
+                                <ul class="list-unstyled text-right">
+                                    <li><a><i class="fa fa-facebook"></i></a></li>
+                                    <li><a><i class="fa fa-twitter"></i></a></li>
+                                    <li><a><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <header class="header-container">
+                <div class="container">
+                    <div class="top-row">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-6 col-xs-6">
+                                <div id="logo">
+                                   
+                                    <a href="home.html"><span>Orion</span>Bank</a>
+                                </div>                       
+                            </div>
+                            <div class="col-sm-6 visible-sm">
+                                <div class="text-right"><button type="button" class="book-now-btn">Auction House</button></div>
+                            </div>
+                            <div class="col-md-8 col-sm-12 col-xs-12 remove-padd">
+                                <nav class="navbar navbar-default">
+                                    <div class="navbar-header page-scroll">
+                                        <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+
+                                    </div>
+                                    <div class="collapse navigation navbar-collapse navbar-ex1-collapse remove-space">
+                                        <ul class="list-unstyled nav1 cl-effect-10">
+                                          <li><a data-hover="Home" href="Bank.jsf"><span>Account</span></a></li>
+								<li><a data-hover="Our_Bank" href="Bankaccount.jsf"><span>About
+											Us</span></a></li>
+								<li><a data-hover="Transferts" class="active"><span>Transfers</span></a></li>
+								<li><a data-hover="My Wallet" href="BankWallet.jsf"><span>My
+											Wallet</span></a></li>
+
+								<li><a data-hover="Contact_Us" href="BankAssistance.jsf"><span>Assistance</span></a></li>
+
+                                        </ul>
+
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-xs-12 hidden-sm">
+							<a href="Auctionhousehome.jsf"><button type="button" class="book-now-btn">Auction House</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            </div>
+<div class="container-contact100">
+		
+<div class="wrap-contact100">
+			<h:form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Make a Transfer 
+				</span>
+				
+<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your rib" >
+					<span class="label-input100">Your Rib</span>
+					<input class="input100" type="text" name="name" value="#{identity.user.bankAccounts.RIB}" />
+				</div>
+				
+<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Enter Your Email (e@a.x)">
+					<span class="label-input100">Email *</span>
+					<input class="input100" type="text" name="email" placeholder="Enter Your Email " />
+				</div>
+				
+<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Destination RIB</span>
+					<h:inputText class="input100"  name="phone" placeholder="Enter RIB" value="#{transfertBean.account_reciving.RIB}"  ></h:inputText>
+				</div>
+				
+<div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Needed Services *</span>
+					
+<div>
+						<select class="js-select2" name="service">
+	<option></option>						
+<option>Money Transfer</option>
+							
+
+
+						</select>
+						
+<div class="dropDownSelect2" />
+					</div>
+				</div>
+				
+<div class="w-full dis-none js-show-service">
+					
+
+
+					
+<div class="wrap-contact100-form-range">
+						<span class="label-input100">Budget *</span>
+						
+<div class="contact100-form-range-value">
+							$<span id="value-lower"  >0</span> - $<span id="value-upper"><h:outputText value="#{identity.user.bankAccounts.credit}" id="credi"></h:outputText> </span>
+							<input type="text" name="from-value"   />
+							<input type="text" name="to-value"  />
+						</div>
+						
+<div class="contact100-form-range-bar">
+							
+<div id="filter-bar" /><br/>
+<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Please comfirm the amount</span>
+					<h:inputText class="input100"  name="phone" placeholder="Enter amount" value="#{transfertBean.transfer.amount}"  ></h:inputText>
+				</div>
+						</div>
+						
+					</div>
+				</div>
+				
+<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate="Please Type Your Message">
+					<span class="label-input100">Message</span>
+					<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+				</div>
+				
+<div class="container-contact100-form-btn">
+<h:commandButton class="contact100-form-btn"
+					action="#{transfertBean.doaddTransfert()}" value="Submit"  />					
+						
+					
+				</div>
+			</h:form>
+		</div>
+	</div>
+	
+<script src="#{request.contextPath}/resources/vendor/jquery/jquery-3.2.1.min.js"></script>
+	
+<script src="#{request.contextPath}/resources/vendor/animsition/js/animsition.min.js"></script>
+	
+<script src="#{request.contextPath}/resources/vendor/bootstrap/js/popper.js"></script>
+	
+<script src="#{request.contextPath}/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+	
+<script src="#{request.contextPath}/resources/vendor/select2/select2.min.js"></script>
+	
+<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+			$(".js-select2").each(function(){
+				$(this).on('select2:close', function (e){
+					if($(this).val() == "Please chooses") {
+						$('.js-show-service').slideUp();
+					}
+					else {
+						$('.js-show-service').slideUp();
+						$('.js-show-service').slideDown();
+					}
+				});
+			});
+		})
+	</script>
+	
+<script src="#{request.contextPath}/resources/vendor/daterangepicker/moment.min.js"></script>
+	
+<script src="#{request.contextPath}/resources/vendor/daterangepicker/daterangepicker.js"></script>
+	
+<script src="#{request.contextPath}/resources/vendor/countdowntime/countdowntime.js"></script>
+	
+<script src="#{request.contextPath}/resources/vendor/noui/nouislider.min.js"></script>
+	<h:inputHidden value="#{identity.user.bankAccounts.credit}" id="credituser"></h:inputHidden>
+	
+<script>
+       var a= parseFloat(document.getElementById('credituser').value);
+      
+       
+	    var filterBar = document.getElementById('filter-bar');
+	    noUiSlider.create(filterBar, {
+	        start: [ 0, a ],
+	        connect: true,
+	        range: {
+	            'min': 0,
+	            'max': a
+	        }
+	    });
+	    var skipValues = [
+	    document.getElementById('value-lower'),
+	    document.getElementById('value-upper')
+	    ];
+	    filterBar.noUiSlider.on('update', function( values, handle ) {
+	        skipValues[handle].innerHTML = Math.round(values[handle]);
+	        $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
+	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
+	    });
+	    
+	</script><!--===============================================================================================-->
+	
+<script src="#{request.contextPath}/resources/js/BankJs/main.js"></script>
+
+<script async="" src="#{request.contextPath}https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-23581568-13');
+</script>
+</body></html>

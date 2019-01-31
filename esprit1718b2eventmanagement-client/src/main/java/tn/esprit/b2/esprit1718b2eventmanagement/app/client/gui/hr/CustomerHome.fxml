@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.hr.CustomerHomeController">
+   <children>
+      <HBox layoutY="1.0" prefHeight="650.0" prefWidth="1100.0">
+         <children>
+            <VBox prefHeight="650.0" prefWidth="1106.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="1100.0" style="-fx-background-color: #b4dcbc; -fx-border-color: #1c4464;">
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="857.0" style="-fx-background-color: #b4dcbc;">
+                           <children>
+                              <VBox prefHeight="91.0" prefWidth="151.0">
+                                 <children>
+                                    <JFXButton alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" onAction="#goToProfile" prefHeight="565.0" prefWidth="256.0" text="Profil" textFill="#1c4463">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="58.0" fitWidth="54.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@icons8-utilisateur-filled-50.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children></VBox>
+                              <VBox alignment="CENTER" prefHeight="102.0" prefWidth="159.0">
+                                 <children>
+                                    <JFXButton alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" onAction="#Go_bank" prefHeight="565.0" prefWidth="256.0" text="Bank" textFill="#1c4463">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="58.0" fitWidth="54.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@icons8-pièces-de-monnaie-50%20(2).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <Label fx:id="userName" prefHeight="50.0" prefWidth="271.0" text="user Name" textFill="#1c4464" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="102.0" prefWidth="90.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="30.0" onMouseClicked="#logout" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-fermer-50.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets right="30.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets right="30.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="30.0" />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="102.0" prefWidth="21.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fx:id="close" fitHeight="60.0" fitWidth="30.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../EM/css/icons8_Close_Window_48px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets left="30.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="400.0" prefWidth="1100.0">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <ImageView fitHeight="384.0" fitWidth="1100.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@trade-show-blurred.jpg" />
+                                 </image>
+                                 <effect>
+                                    <InnerShadow height="154.72" radius="43.43" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="384.0" fitWidth="368.0" layoutX="5.0" layoutY="-3.0" opacity="0.62" pickOnBounds="true" rotate="-90.0">
+                                 <image>
+                                    <Image url="@../EM/css/hhh.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#b4dcbc" layoutX="36.0" layoutY="320.0" stroke="#26253c" strokeLineCap="BUTT" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="2.0" text="&lt;/Sector's Club&gt;">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="67.0" />
+                                 </font>
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="#f9ffc4" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="139.0" prefWidth="1100.0">
+                     <children>
+                        <VBox prefHeight="138.0" prefWidth="258.0">
+                           <children>
+                              <AnchorPane prefHeight="157.0" prefWidth="258.0">
+                                 <children>
+                                    <ImageView fitHeight="182.0" fitWidth="258.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Capture.PNG" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust brightness="0.73" />
+                                       </effect>
+                                    </ImageView>
+                                    <JFXButton onAction="#Go_Auctionhouse" prefHeight="153.0" prefWidth="256.0" text="Auctionhouse" textFill="#607f97">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="450.0" prefWidth="252.0">
+                           <children>
+                              <AnchorPane prefHeight="143.0" prefWidth="252.0">
+                                 <children>
+                                    <ImageView fitHeight="153.0" fitWidth="252.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@eventroom.png" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust brightness="0.63" />
+                                       </effect>
+                                    </ImageView>
+                                    <JFXButton fx:id="eventsButt" onAction="#goToEvents" prefHeight="153.0" prefWidth="252.0" text="Events room" textFill="#607f97">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </AnchorPane>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" right="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="268.0" layoutY="10.0" prefHeight="450.0" prefWidth="252.0">
+                           <children>
+                              <AnchorPane prefHeight="143.0" prefWidth="252.0">
+                                 <children>
+                                    <ImageView fitHeight="153.0" fitWidth="252.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@exhibitionhall.png" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust brightness="0.63" />
+                                       </effect>
+                                    </ImageView>
+                                    <JFXButton fx:id="exhibition" onAction="#goToExhibitionHalll" prefHeight="153.0" prefWidth="252.0" text="Exhibition Hall" textFill="#607f97">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" right="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="550.0" layoutY="10.0" prefHeight="450.0" prefWidth="252.0">
+                           <children>
+                              <AnchorPane prefHeight="143.0" prefWidth="252.0">
+                                 <children>
+                                    <ImageView fitHeight="153.0" fitWidth="252.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@images.png" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust brightness="0.63" />
+                                       </effect>
+                                    </ImageView>
+                                    <JFXButton onAction="#goToInfoCenter" prefHeight="153.0" prefWidth="252.0" text="Info Center" textFill="#607f97">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" right="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

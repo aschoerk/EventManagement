@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #b4dcbc;;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.exhibHall.BoothAddController">
+   <children>
+      <ImageView fx:id="closeButton" fitHeight="33.0" fitWidth="28.0" layoutX="1056.0" layoutY="13.0" onMouseClicked="#clos" pickOnBounds="true" preserveRatio="true" x="1.0" AnchorPane.bottomAnchor="609.0">
+         <image>
+            <Image url="@../EM/css/icons8_Close_Window_48px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ScrollPane layoutX="2.0" layoutY="52.0" prefHeight="598.0" prefWidth="1098.0" stylesheets="@../EM/css/AddSpecialEvent.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="599.0" prefWidth="1083.0">
+               <children>
+                  <Label layoutX="57.0" layoutY="23.0" text="Create your Booth" textFill="#615c5c" underline="true">
+                     <font>
+                        <Font name="Bookman Old Style" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="71.0" layoutY="97.0" text="Name:" textFill="#000000bc">
+                     <font>
+                        <Font name="MS Reference Specialty" size="21.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="42.0" layoutY="23.0" orientation="VERTICAL" prefHeight="496.0" prefWidth="0.0" />
+                  <JFXTextField fx:id="bname" focusColor="#2b473cf7" layoutX="156.0" layoutY="95.0" prefHeight="25.0" prefWidth="312.0" unFocusColor="#1c4464" />
+                  <Label layoutX="70.0" layoutY="161.0" text="Logo:" textFill="#000000bc">
+                     <font>
+                        <Font name="MS Reference Specialty" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="logopath" disable="true" editable="false" focusColor="#2b473cf7" layoutX="157.0" layoutY="159.0" prefHeight="25.0" prefWidth="312.0" unFocusColor="#1c4464" />
+                  <Label layoutX="59.0" layoutY="214.0" text="Booth Type :" textFill="#000000bc">
+                     <font>
+                        <Font name="MS Reference Specialty" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="vidpreview" fitHeight="27.0" fitWidth="21.0" layoutX="434.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../EM/css/iDockIconsMacAppIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="94.0" layoutY="395.0" />
+                  <Label layoutX="68.0" layoutY="311.0" text="Add an external link:" textFill="#000000bc">
+                     <font>
+                        <Font name="MS Reference Specialty" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="bname1" focusColor="#2b473cf7" layoutX="64.0" layoutY="380.0" prefHeight="25.0" prefWidth="412.0" unFocusColor="#1c4464" />
+                  <Label layoutX="52.0" layoutY="443.0" text="Do you want to assign your booth to one of our Sector clubs?">
+                     <font>
+                        <Font name="Narkisim" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="clubscombo" layoutX="211.0" layoutY="541.0" prefHeight="25.0" prefWidth="289.0" visible="false" />
+                  <Label fx:id="chooseclub" layoutX="52.0" layoutY="546.0" text="Choose a Club" visible="false">
+                     <font>
+                        <Font name="Narkisim" size="20.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="checkyes" layoutX="65.0" layoutY="489.0" mnemonicParsing="false" onAction="#showvalues" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="yes" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="checkno" layoutX="420.0" layoutY="488.0" mnemonicParsing="false" onAction="#showvalues" text="No" toggleGroup="$yes">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></RadioButton>
+                  <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="-93.0" layoutY="-41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../EM/css/Add%20Image_40px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="433.0" layoutY="158.0" onAction="#chooseBanner" prefHeight="20.0" prefWidth="38.0">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../EM/css/Add%20Image_40px.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <BorderPane fx:id="boothstyle1" layoutX="565.0" layoutY="161.0" prefHeight="365.0" prefWidth="502.0" visible="false">
+                     <top>
+                        <ImageView fx:id="ivbground" fitHeight="365.0" fitWidth="456.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../EM/css/booth11.png" />
+                           </image>
+                        </ImageView>
+                     </top></BorderPane>
+                  <Pane fx:id="outerpane" layoutX="530.0" layoutY="29.0" prefHeight="529.0" prefWidth="551.0" visible="false">
+                     <children>
+                        <BorderPane fx:id="borderhaja" layoutX="158.0" layoutY="207.0" prefHeight="118.0" prefWidth="266.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </BorderPane>
+                        <Label layoutX="168.0" layoutY="44.0" prefHeight="55.0" prefWidth="231.0" text="Customize your booth">
+                           <font>
+                              <Font name="Centaur" size="26.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <JFXButton buttonType="RAISED" layoutX="983.0" layoutY="1.0" onAction="#testadd" prefHeight="25.0" prefWidth="94.0" ripplerFill="#10ebb89f" text="save" textFill="#03010f" textOverrun="WORD_ELLIPSIS" underline="true">
+                     <font>
+                        <Font name="Capture it" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="983.0" layoutY="560.0" onAction="#breturn" prefHeight="25.0" prefWidth="94.0" ripplerFill="#10ebb89f" text="return" textFill="#03010f" textOverrun="WORD_ELLIPSIS" underline="true">
+                     <font>
+                        <Font name="Capture it" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXRadioButton fx:id="rinfo" layoutX="41.0" layoutY="254.0" text="Informational" textFill="#151a03">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="boothty" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rshow" layoutX="203.0" layoutY="254.0" text="ShowCase" textFill="#151a03" toggleGroup="$boothty">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="roffers" layoutX="358.0" layoutY="252.0" text="Job Offers" textFill="#151a03" toggleGroup="$boothty" visible="false">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

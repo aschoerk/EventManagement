@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.hr.CompanyRepHomeController">
+   <children>
+      <Label layoutX="87.0" layoutY="175.0" prefHeight="199.0" prefWidth="368.0" text="company rep home page" />
+      <JFXButton fx:id="logout" layoutX="29.0" layoutY="20.0" onAction="#logOut" text="logout" />
+   </children>
+</AnchorPane>

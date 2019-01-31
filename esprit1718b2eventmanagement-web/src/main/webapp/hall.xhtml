@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head lang="zxx">
+
+
+
+	<title>Exhibition hall</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+	<meta charset="utf-8"></meta>
+	<meta name="keywords" content="" />
+	<style>
+input[type=text] {
+	width: 130px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url('searchicon.png');
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+.body {
+	margin: 0 !important;
+}
+
+.inputs:focus {
+	width: 75%;
+}
+
+.banner {
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2),
+		rgba(23, 22, 23, 0.5));
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2),
+		rgba(23, 22, 23, 0.5));
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2),
+		rgba(23, 22, 23, 0.5));
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5));
+	background-size: cover;
+	height: 230px!importent;
+}
+
+.bgimg {
+	background-image:
+		url("http://localhost:18080/esprit1718b2eventmanagement-web/image?id=#{boothCrudsBean.booth.id}");
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+	
+}
+.img{
+border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+</style>
+	<script>
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/css/exhib/bootstrap.css" />
+
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/css/exhib/simpleLightbox.css" />
+
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/css/exhib/style.css" />
+
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/css/exhib/fontawesome-all.css" />
+
+
+</h:head>
+
+<h:body class="body">
+
+	<div class="top-bar_sub container-fluid">
+
+		<div class="row">
+			<div class="col-md-4 top-forms text-left mt-4" data-aos="fade-up">
+				<span>Welcome Back!</span> <span class="mx-lg-4 mx-md-2  mx-1">
+					<a href="login.html"> <i class="fas fa-lock"></i> Sign In
+				</a>
+				</span> <span> <a href="register.html"> <i class="far fa-user"></i>
+						Register
+				</a>
+				</span>
+			</div>
+			<div class="col-md-4 logo text-center" data-aos="fade-up"></div>
+
+			<div class="col-md-4 log-icons text-right" data-aos="fade-up">
+
+				<ul class="social_list1 mt-4">
+
+					<li><a href="#" class="facebook1 mx-2"> <i class="fab "></i>
+
+					</a></li>
+					<li><a href="#" class="twitter2"> <i class="fab "></i>
+
+					</a></li>
+					<li><a href="#" class="dribble3 mx-2"> <i class="fab "></i>
+					</a></li>
+					<li><a href="#" class="pin"> <i class="fab "></i>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="banner-inner">
+
+			<h:graphicImage value="/resources/images/icons/OE9VD0.jpg"
+				class="banner" />
+		</div>
+
+		<div class="header_top" id="home">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<button class="navbar-toggler navbar-toggler-right mx-auto"
+					type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item"><a class="nav-link">Home <span
+								class="sr-only">(current)</span>
+						</a></li>
+						<li class="nav-item"><a class="nav-link">About</a></li>
+						<li class="nav-item"><a class="nav-link">Menu</a></li>
+						<li class="nav-item active"><a class="nav-link">Blog</a></li>
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> Drop Down </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item"></a> <a class="dropdown-item">Gallery</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item">Services</a>
+							</div></li>
+						<li class="nav-item"><a class="nav-link">Contact</a></li>
+
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<!--//nav-->
+		<h3 class="tittle">Our Gallery</h3>
+		<div>
+			
+			<h:form>
+				<section class="banner-bottom">
+
+
+
+
+					<div class="container ">
+<h:form>
+				<p:inputText class="inputs" value="#{boothCrudsBean.letter}"
+					id="search" width="75%">
+             
+
+				</p:inputText>
+				<h:commandButton value="search"
+					action="#{boothCrudsBean.dofilterbooths()}"></h:commandButton>
+			</h:form>
+	<div class="row inner-sec">
+						
+							
+							<ui:repeat var="o" id="out" value="#{boothCrudsBean.booths}"
+								varStatus="status">
+								<div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+									<div class="section_1_gallery_grid">
+
+										<a title="Visit #{o.name}">
+											<div class="section_1_gallery_grid1">
+
+												<p:graphicImage
+													value="http://localhost:18080/esprit1718b2eventmanagement-web/img?id=#{o.id}"
+													title="#{s.name}" class="img-fluid" height="350"
+													width="250" />
+												<div class="proj_gallery_grid1_pos">
+													<h3>
+														<h:outputText value="#{o.name}"></h:outputText>
+													</h3>
+													<br></br>
+													<h:outputText value="#{o.type}"></h:outputText>
+												</div>
+											</div>
+										</a>
+									</div>
+
+								</div>
+
+							</ui:repeat>
+
+					</div>
+
+					</div>
+
+				</section>
+			</h:form>
+		</div>
+
+
+		<script
+			src="#{request.contextPath}/resources/js/exhib/jquery-2.2.3.min.js"></script>
+
+
+		<script
+			src="#{request.contextPath}/resources/js/exhib/simpleLightbox.js"></script>
+
+		<script>
+			$('.proj_gallery_grid a').simpleLightbox();
+		</script>
+
+
+		<link rel="stylesheet" type="text/css"
+			href="#{request.contextPath}/resources/css/exhib/aos.css" />
+
+
+		<link rel="stylesheet prefetch" type="text/css"
+			href="#{request.contextPath}/resources/css/exhib/aos-animation.css"
+			media="all" />
+
+		<script src='js/aos.js'></script>
+		<script src="#{request.contextPath}/resources/js/exhib/aos.js"></script>
+
+		<script src="js/aosindex.js"></script>
+		<script src="#{request.contextPath}/resources/js/exhib/aosindex.js"></script>
+
+		<script src="js/move-top.js"></script>
+		<script src="#{request.contextPath}/resources/js/exhib/move-top.js"></script>
+		<script src="js/easing.js"></script>
+		<script src="#{request.contextPath}/resources/js/exhib/easing.js"></script>
+		<script>
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event) {
+					event.preventDefault();
+					$('html,body').animate({
+						scrollTop : $(this.hash).offset().top
+					}, 900);
+				});
+			});
+		</script>
+
+
+		<script>
+			$(document).ready(function() {
+				/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+				 */
+
+				$().UItoTop({
+					easingType : 'easeOutQuart'
+				});
+
+			});
+		</script>
+
+		<a href="#{request.contextPath}/home" class="scroll" id="toTop"
+			style="display: block;"> <span id="toTopHover"
+			style="opacity: 1;"> </span>
+		</a>
+
+
+		<script src="js/bootstrap.js"></script>
+		<script src="#{request.contextPath}/resources/js/exhib/bootstrap.js"></script>
+	</div>
+
+</h:body>
+
+</html>

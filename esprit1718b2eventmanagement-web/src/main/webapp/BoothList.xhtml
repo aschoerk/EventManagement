@@ -1,0 +1,69 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/exhibackendtemp.xhtml">
+	<ui:define name="pageAdd">
+		<h:form>
+			<p:dataTable var="e" value="#{boothCrudsBean.booths}">
+				<f:facet name="header">
+           you booths
+        </f:facet>
+				<p:column style="width:30px">
+
+					<p:rowToggler />
+				</p:column>
+				<p:column headerText="Id">
+					<h:outputText value="#{e.id}"
+						class="fa  fa-fw w3-margin-right w3-text-teal" />
+				</p:column>
+				<p:column headerText="name">
+					<h:outputText value="#{e.name}"
+						class="fa  fa-fw w3-margin-right w3-text-teal" />
+				</p:column>
+				<p:column headerText="Link">
+					<h:outputText value="#{e.extLink}"
+						class="fa  fa-fw w3-margin-right w3-text-teal" />
+				</p:column>
+				<p:column headerText="type">
+					<h:outputText value="#{e.type}"
+						class="fa  fa-fw w3-margin-right w3-text-teal" />
+				</p:column>
+				<p:column headerText="Views">
+					<h:outputText value="#{e.visits}"
+						class="fa  fa-fw w3-margin-right w3-text-teal" />
+				</p:column>
+				<p:column headerText="Rating">
+					<h:outputText value="#{e.rating}"
+						class="fa  fa-fw w3-margin-right w3-text-teal" />
+				</p:column>
+				<p:rowExpansion>
+				
+					<p:panelGrid columns="5" columnClasses="label,value"
+						style="width:100%">
+<h:panelGroup>
+
+
+						<h:outputText value="name" />
+
+						<h:inputText value="#{e.name}" class="input-w" style="Height:5px"/>
+						<h:outputText value="Link" />
+
+						<h:inputText value="#{e.extLink}" class="input-w" style="Height:5px"/>
+						</h:panelGroup> 
+						
+					
+				<h:panelGroup>
+						<h:commandButton class="button1" action="#{boothCrudsBean.doupdateBooth(e)}"
+							value="update" style="Height:25px"/>
+						<h:commandButton class="button1" action="#{boothCrudsBean.dodeleteBooth(e)}"
+							value="delete" style="Height:25px"/></h:panelGroup>
+					</p:panelGrid>
+					
+					
+				</p:rowExpansion>
+			</p:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>

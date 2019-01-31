@@ -1,0 +1,24 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+ <div class="wrapper">
+  <div>
+  <p>Streaming . . .</p>
+  <video class="h"></video>
+  </div>
+  <div>
+  <h1 hidden="true">>Video on Canvas</h1>
+  <canvas></canvas>
+  </div>
+  
+  <div hidden="true">>
+   <h1> Video from Server</h1>
+  <img class="y" alt="" />
+  </div>
+ </div>
+<script type="text/javascript"
+			src="#{request.contextPath}/resources/js/video.js"></script>
+</ui:composition>
+

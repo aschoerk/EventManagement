@@ -1,0 +1,69 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	>
+
+	<h:head>
+	<style>
+	.bgimg {
+	background-image: url("http://localhost:18080/esprit1718b2eventmanagement-web/img?id=#{boothCrudsBean.booth.id}");
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+}</style>
+	
+	</h:head>
+		
+<h:body>
+		
+			<div >
+				<div
+					class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+					<span class="w3-tag"> <h:outputText
+							value="#{boothCrudsBean.booth.name}" /> <h:outputText
+							value="#{boothCrudsBean.booth.type}" /> 
+					</span>
+				</div>
+				<div class="w3-display-middle w3-center">
+					<span style="font-size: 90px"> <h:outputText
+							value="#{boothCrudsBean.booth.name}" id="m" />
+					</span>
+				</div>
+				<div
+					class="w3-display-bottomright w3-center w3-padding-large w3-hide-small">
+					<span class="w3-tag"><h:outputText
+							value="#{boothCrudsBean.booth.type}" /></span>
+				</div>
+			</div>
+	
+
+		<script type="text/javascript"
+			src="#{request.contextPath}/resources/js/particles.js" />
+		<script type="text/javascript"
+			src="#{request.contextPath}/resources/js/app.js" />
+
+
+	
+		
+		
+	
+
+
+		<p:galleria value="#{boothCrudsBean.booths}" var="s" panelWidth="666"
+			panelHeight="313" showCaption="true" effect="fade" autoPlay="true"
+			effectSpeed="1000" transitionInterval="5000">
+
+			<p:graphicImage 
+				value="http://localhost:18080/esprit1718b2eventmanagement-web/img?id=#{s.id}"
+				height="313" width="666" alt="#{s.type}"
+				title="#{s.name}" />
+
+
+
+		</p:galleria>
+
+
+	</h:body>
+	</html>

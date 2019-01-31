@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<title><ui:insert name="pageTitle" /></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<h:outputStylesheet library="css" name="booth.css" />
+<link rel="stylesheet" type=""
+		href="#{request.contextPath} https://fonts.googleapis.com/css?family=Roboto" />
+<h:outputStylesheet library="css" name="booth2.css" />
+
+</h:head>
+<h:body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+         
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+           
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i></p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i></p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i></p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i></p>
+          <hr></hr>
+
+          <p class="w3-large"><b><i class=" fa-fw w3-margin-right w3-text-teal"></i>FAZA MIZYENA</b></p>
+          <p>LINK</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">
+              <div class="w3-center w3-text-white"></div>
+            </div>
+          </div>
+          <p>LINK</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">
+              <div class="w3-center w3-text-white"></div>
+            </div>
+          </div>
+          <p>LINK</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">
+              <div class="w3-center w3-text-white"></div>
+            </div>
+          </div>
+          <p>LINK</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">
+              <div class="w3-center w3-text-white"></div>
+            </div>
+          </div>
+          
+
+          
+         
+          
+        </div>
+      </div><br></br>
+
+    
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa  fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Booth Management	</h2>
+        
+        
+
+      </div>
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa  fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Add your booth</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b></b></h5>
+          <ui:insert name="pageAdd" />
+
+          <hr></hr>
+          
+        </div>
+        
+      
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+
+
+</h:body>
+</html>

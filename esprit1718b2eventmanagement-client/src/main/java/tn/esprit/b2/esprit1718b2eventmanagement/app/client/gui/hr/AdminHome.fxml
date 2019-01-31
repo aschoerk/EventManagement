@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1100.0" style="-fx-border-color: #b4dcbc;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.hr.AdminHomeController">
+   <children>
+      <HBox prefHeight="650.0" prefWidth="1100.0">
+         <children>
+            <VBox prefHeight="650.0" prefWidth="114.0" style="-fx-background-color: #b4dcbc;">
+               <children>
+                  <HBox prefHeight="114.0" prefWidth="125.0" style="-fx-background-color: #1c4464;" />
+                  <VBox alignment="CENTER" prefHeight="368.0" prefWidth="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-page-d’accueil-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Home" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-utilisateur-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="21.0" prefWidth="45.0" text="Profile" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-pièces-de-monnaie-50%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Bank" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-graphique-combiné-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Stat" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" onMouseClicked="#back" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons8-arrière-filled-50.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Back" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#b4dcbc" height="7.39" radius="5.0424999999999995" spread="0.01" width="14.78" />
+               </effect>
+            </VBox>
+            <VBox prefHeight="650.0" prefWidth="1005.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="995.0" style="-fx-background-color: #fff;">
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="857.0">
+                           <children>
+                              <VBox prefHeight="102.0" prefWidth="48.0" />
+                              <VBox alignment="CENTER" prefHeight="102.0" prefWidth="159.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <Label fx:id="userName" prefHeight="50.0" prefWidth="271.0" text="user Name" textFill="#6b6b64" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="102.0" prefWidth="90.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="30.0" onMouseClicked="#logout" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8-fermer-50.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets right="30.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets right="30.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="30.0" />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="102.0" prefWidth="21.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fx:id="close" fitHeight="60.0" fitWidth="30.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../EM/css/icons8_Close_Window_48px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets left="30.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="550.0" prefWidth="975.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

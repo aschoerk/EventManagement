@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.exhibHall.DisplayBoothsController">
+   <children>
+      <Pane layoutY="51.0" prefHeight="200.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" />
+      <Pane prefHeight="52.0" prefWidth="1100.0" style="-fx-background-color: #b4dcbb;">
+         <children>
+            <Label layoutX="360.0" layoutY="2.0" prefHeight="49.0" prefWidth="417.0" text="Exhibition Hall">
+               <font>
+                  <Font name="Algerian" size="43.0" />
+               </font>
+               <effect>
+                  <Glow level="0.0">
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </Glow>
+               </effect>
+            </Label>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1050.0" layoutY="12.0" onAction="#clos">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../EM/css/icons8_Close_Window_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children></Pane>
+      <ImageView fitHeight="569.0" fitWidth="1100.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../EM/css/backg.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="upperright" fitHeight="289.0" fitWidth="361.0" layoutX="769.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../EM/css/booth11.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="downleft" fitHeight="289.0" fitWidth="361.0" layoutX="141.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../EM/css/booth11.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="downright" fitHeight="289.0" fitWidth="361.0" layoutX="560.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../EM/css/booth11.png" />
+         </image>
+      </ImageView>
+      <BorderPane fx:id="lu1" layoutX="47.0" layoutY="215.0" prefHeight="94.0" prefWidth="206.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </BorderPane>
+      <BorderPane fx:id="mu1" layoutX="451.0" layoutY="180.0" prefHeight="94.0" prefWidth="206.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </BorderPane>
+      <BorderPane fx:id="ru1" layoutX="850.0" layoutY="210.0" prefHeight="101.0" prefWidth="206.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </BorderPane>
+      <BorderPane fx:id="ld1" layoutX="225.0" layoutY="390.0" prefHeight="94.0" prefWidth="206.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </BorderPane>
+      <BorderPane fx:id="rd1" layoutX="642.0" layoutY="390.0" prefHeight="94.0" prefWidth="206.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </BorderPane>
+      <JFXButton fx:id="nextb" contentDisplay="GRAPHIC_ONLY" layoutX="1005.0" layoutY="436.0" onAction="#next" prefHeight="52.0" prefWidth="81.0">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../EM/css/icons8-next-page-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="prevb" contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="433.0" onAction="#prev" prefHeight="52.0" prefWidth="81.0" rotate="180.0">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../EM/css/icons8-next-page-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fx:id="comingsoon" fitHeight="150.0" fitWidth="200.0" layoutX="235.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../EM/css/coming.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="b1" contentDisplay="GRAPHIC_ONLY" layoutX="-43.0" layoutY="149.0">
+         <graphic>
+            <ImageView fx:id="upperleft" fitHeight="289.0" fitWidth="365.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../EM/css/booth11.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Pane fx:id="searchbar" layoutY="56.0" opacity="0.59" prefHeight="54.0" prefWidth="1100.0" style="-fx-background-color: #70767f;">
+         <children>
+            <JFXTextField fx:id="searchname" focusColor="#f3f8af" layoutX="54.0" layoutY="10.0" prefHeight="15.0" prefWidth="358.0" style="-fx-background-color: #bcc0c6; -fx-background-radius: 20;" unFocusColor="#f2f267">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font></JFXTextField>
+         </children>
+      </Pane>
+      <JFXRadioButton fx:id="info" layoutX="413.0" layoutY="72.0" style="-jfx-selected-color: #1c4661;" text="Informational" textFill="#d7eb72">
+         <font>
+            <Font name="Georgia" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="type" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="show" layoutX="542.0" layoutY="72.0" style="-jfx-selected-color: #1c4661;" text="ShowCase" textFill="#d7eb72" toggleGroup="$type">
+         <font>
+            <Font name="Georgia" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="job" layoutX="645.0" layoutY="72.0" style="-jfx-selected-color: #1c4661;" text="Job Offers" textFill="#d7eb72" toggleGroup="$type" visible="false">
+         <font>
+            <Font name="Georgia" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXComboBox fx:id="clubscombo" focusColor="#cde4df" layoutX="822.0" layoutY="68.0" prefHeight="25.0" prefWidth="243.0" promptText="Choose Designated Club" style="-fx-border-radius: 20; -fx-background-color: #bfc3c9;" unFocusColor="#f2f09d" />
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="62.0" onAction="#search">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="31.0">
+               <image>
+                  <Image url="@../EM/css/searchzey.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fx:id="middle" fitHeight="289.0" fitWidth="365.0" layoutX="369.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../EM/css/booth11.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="b11" contentDisplay="GRAPHIC_ONLY" layoutX="436.0" layoutY="168.0" prefHeight="194.0" prefWidth="232.0" />
+      <JFXButton fx:id="b111" contentDisplay="GRAPHIC_ONLY" layoutX="848.0" layoutY="200.0" prefHeight="194.0" prefWidth="214.0" />
+      <JFXButton fx:id="b2" contentDisplay="GRAPHIC_ONLY" layoutX="636.0" layoutY="389.0" prefHeight="194.0" prefWidth="214.0" />
+      <JFXButton fx:id="b21" contentDisplay="GRAPHIC_ONLY" layoutX="217.0" layoutY="388.0" prefHeight="194.0" prefWidth="214.0" />
+   </children>
+</AnchorPane>

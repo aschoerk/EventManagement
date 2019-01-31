@@ -1,0 +1,83 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/exhibackendtemp.xhtml">
+	<ui:define name="pageAdd">
+		<h:form enctype="multipart/form-data">
+			<h:panelGrid class="panelGridA" columns="2">
+				<h:panelGroup>
+
+					<h:outputText for="category"
+						class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"
+						value="NAME :			"  />
+				</h:panelGroup>
+				<h:panelGroup>
+					<h:inputText class="input-w" id="boothName" 
+						value="#{boothCrudsBean.booth.name}"  label="Booth Name">
+
+						<f:validateRequired />
+				</h:inputText>
+					<h:message for="boothName"  style="teal" />
+				</h:panelGroup>
+				<h:panelGroup>
+					<h:outputText
+						class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"
+						value="LINK :			" />
+				</h:panelGroup>
+				<h:panelGroup>
+					<h:inputText class="input-w" id="boothLink"
+						value="#{boothCrudsBean.booth.extLink}" label="Link">
+						
+						 <f:validator validatorId = "UrlValidator" />
+					</h:inputText>
+					<h:message for="boothLink"  style="color:teal" />
+					
+				</h:panelGroup>
+
+				<h:panelGroup>
+					<h:outputText
+						class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"
+						value="TYPE :			" />
+
+				</h:panelGroup>
+				<h:panelGroup>
+					<h:selectOneMenu class="dropbtn" id="BoothType"
+						value="#{boothCrudsBean.booth.type}" Label="Booth Type">
+						<f:validateRequired />
+						<f:selectItem itemLabel="Booth types" itemDisabled="true" />
+						<f:selectItem class="dropdown-content" itemValue="Informational"
+							itemLabel="Informational" />
+						<f:selectItem class="dropdown-content" itemValue="ShowCase"
+							itemLabel="ShowCase" />
+					</h:selectOneMenu>
+					<h:message for="BoothType"  style="teal" />
+				</h:panelGroup>
+				<h:panelGroup>
+					<h:outputText
+						class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"
+						value="BANNER" />
+				</h:panelGroup>
+				<h:panelGroup>
+					<p:growl id="messages" showDetail="true" />
+					<p:fileUpload value="#{boothCrudsBean.file}" class="button1"
+						binding="#{boothpic}" mode="simple" skinSimple="true" />
+
+				</h:panelGroup>
+				
+				<h:outputText
+					class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal" value="" />
+				<h:outputText
+					class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal" value="" />
+
+               <p:growl id="growl" showDetail="true" sticky="true" />  
+ 
+    
+				<h:commandButton class="button1"
+					action="#{boothCrudsBean.doAddBooth()}" value="add" />
+ 
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

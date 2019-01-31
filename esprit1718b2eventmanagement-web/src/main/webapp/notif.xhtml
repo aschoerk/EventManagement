@@ -1,0 +1,57 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions">
+	
+	<i class="fa fa-bell w3-large fa-fw ">
+	</i> <span class="w3-dropdown-content w3-green w3-padding">
+<h:form>
+			<h:dataTable value="#{userSubBean.participations}" var="e" border="2"
+				rendered="#{not userSubBean.showForm}">
+				<h:column id="c1">
+					<f:facet name="header">
+						<h:outputText value="id" />
+					</f:facet>
+					<h:outputText value="#{e.id}" />
+				</h:column>
+				<h:column id="c2">
+					<f:facet name="header">
+						<h:outputText value="name" />
+					</f:facet>
+					<h:outputText value="#{e.message}" />
+				</h:column>
+				<h:column id="c3">
+					<f:facet name="header">
+						<h:outputText value="#" />
+					</f:facet>
+					<h:commandButton action="#{userSubBean.doSelect()}"
+						value="select">
+						<f:setPropertyActionListener value="#{e}"
+							target="#{userSubBean.participation}"></f:setPropertyActionListener>
+					</h:commandButton>
+				</h:column>
+			</h:dataTable>
+
+			<h:panelGrid columns="2" border="2"
+				rendered="#{userSubBean.showForm}">
+				<h:commandButton class="w3-button w3-margin" action="#{userSubBean.doAccept()}"
+					value="accept" />
+				<h:commandButton class="w3-button w3-margin" action="#{userSubBean.doDelete()}"
+					value="delete" />
+				
+			</h:panelGrid>
+		</h:form>
+
+
+
+</span><h:outputLabel value ="#{userSubBean.pn}"></h:outputLabel>
+	
+	
+	
+	
+	
+	
+	
+	</ui:composition>

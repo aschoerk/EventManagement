@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #1c4464; -fx-border-color: #b4dcbc #b4dcbc;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b2.esprit1718b2eventmanagement.app.client.gui.hr.SignInController">
+   <children>
+      <ImageView fitHeight="540.0" fitWidth="652.0" layoutX="521.0" layoutY="54.0" opacity="0.21" pickOnBounds="true" rotate="90.0">
+         <image>
+            <Image url="@4391.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="98.0" layoutY="85.0" prefHeight="450.0" prefWidth="834.0" style="-fx-background-color: #b4dcbc;">
+         <children>
+            <JFXTextField fx:id="name" labelFloat="true" layoutX="75.0" layoutY="21.0" promptText="*Full Name" />
+            <JFXTextField fx:id="login" labelFloat="true" layoutX="75.0" layoutY="81.0" promptText="*Username" />
+            <JFXTextField fx:id="email" labelFloat="true" layoutX="75.0" layoutY="253.0" promptText="*Email" />
+            <JFXTextField fx:id="number" labelFloat="true" layoutX="545.0" layoutY="21.0" promptText="*Phone Number" />
+            <JFXTextField fx:id="title" labelFloat="true" layoutX="545.0" layoutY="81.0" promptText="Country" />
+            <JFXTextField fx:id="country" labelFloat="true" layoutX="545.0" layoutY="136.0" promptText="Job Title" />
+            <JFXTextField fx:id="state" labelFloat="true" layoutX="545.0" layoutY="194.0" promptText="State" />
+            <JFXTextField fx:id="street" labelFloat="true" layoutX="545.0" layoutY="253.0" promptText="Street" />
+            <JFXTextField fx:id="zipCode" labelFloat="true" layoutX="545.0" layoutY="314.0" promptText="Zip Code" />
+            <Label layoutX="577.0" layoutY="358.0" prefHeight="31.0" prefWidth="84.0" text="*Are You : a " />
+            <RadioButton fx:id="customer" layoutX="669.0" layoutY="395.0" mnemonicParsing="false" selected="true" text="Customer">
+               <toggleGroup>
+                  <ToggleGroup fx:id="haja" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="companyRep" layoutX="508.0" layoutY="395.0" mnemonicParsing="false" text="Company Owner" toggleGroup="$haja" />
+            <JFXTextArea fx:id="discription" labelFloat="true" layoutX="75.0" layoutY="314.0" prefHeight="88.0" prefWidth="315.0" promptText="Tell us something about yourself" />
+            <Separator layoutX="411.0" layoutY="25.0" orientation="VERTICAL" prefHeight="381.0" prefWidth="0.0">
+               <effect>
+                  <Shadow blurType="GAUSSIAN" color="#1c4464" height="114.29" radius="30.212500000000002" width="8.56" />
+               </effect>
+            </Separator>
+            <JFXPasswordField fx:id="password" labelFloat="true" layoutX="75.0" layoutY="136.0" promptText="*Password" />
+            <JFXPasswordField fx:id="passwordTwo" labelFloat="true" layoutX="75.0" layoutY="194.0" promptText="*Repeat Password" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Label fx:id="message" layoutX="385.0" layoutY="597.0" prefHeight="31.0" prefWidth="261.0" textFill="RED" />
+      <JFXButton layoutX="431.0" layoutY="550.0" onAction="#SignIn" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #b4dcbc; -fx-border-color: #b4dcbc;" text="Sign In" textFill="#1c4464" />
+      <ImageView fitHeight="61.0" fitWidth="50.0" layoutX="6.0" onMouseClicked="#backLogin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-annuler-48.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1057.0" layoutY="10.0" onAction="#closeWindow" text="X" textFill="#b4dcbc">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,142 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	template="/template/dashboardTemp.xhtml">
+	<ui:define name="PageContent">
+		<div class="bg-container-contact100"
+			style="background-image: url(#{request.contextPath}/resources/img/1405.jpg);">
+
+			<a href="#" class="contact100-header-logo"> </a>
+
+			<div>
+				<button class="btn-show-contact100">Contact Us</button>
+			</div>
+		</div>
+
+		<div class="container-contact100">
+			<div class="wrap-contact100">
+				<a href="#{request.contextPath}/eventDashboard.jsf"><button
+						class="btn-hide-contact100">
+						<i class="zmdi zmdi-close"></i>
+					</button></a>
+				<div class="contact100-form-title"
+					style="background-image: url(#{request.contextPath}/resources/images/bg-02.jpg);">
+					<span>New Event</span>
+				</div>
+
+
+				<h:form class="contact100-form validate-form" >
+					<h:panelGrid columns="2" columnClasses="label, value">
+
+						<h:outputText class="w3-text-grey" value="Name : *" />
+						<h:inputText type="text" class="w3-input w3-hover-grey"
+							value="#{eventBean.newSp.name}"  name="nameee"
+							 />
+
+
+						<h:outputText class="w3-text-grey" value="Sector: " />
+						<h:inputText class="w3-input w3-hover-grey"
+							value="#{eventBean.newSp.eventSector}" />
+
+
+						<h:outputText class="w3-text-grey" value="Link : *" />
+						<h:inputText class="w3-input w3-hover-grey"
+							value="#{eventBean.newSp.externalLink}" required="true"
+							label="Link" />
+
+
+						<h:outputText class="w3-text-grey" value="Description : " />
+						<h:inputTextarea class="w3-input w3-hover-grey" rows="5" cols="50"
+							value="#{eventBean.newSp.description}" />
+
+
+
+
+						<h:outputText class="w3-text-grey" value="Address :" />
+						<h:inputText class="w3-input w3-hover-grey"
+							value="#{eventBean.newSp.address}" />
+
+
+
+						<h:outputLabel class="w3-text-grey" for="prefix" value="Price: " />
+						<p:spinner class="w3-input w3-hover-grey" id="prefix"
+							value="#{eventBean.newSp.price}" prefix="$ " min="0" />
+
+
+						<p:outputLabel class="w3-text-grey" for="effectt"
+							value="Start Date:" />
+						<p:calendar class="w3-input w3-hover-grey" id="effectt"
+							value="#{eventBean.sdate}"
+							mindate="#{eventBean.currentDate}" />
+						<p:outputLabel class="w3-text-grey" for="times" value="Time:" />
+						<p:calendar class="w3-input w3-hover-grey" id="times"
+							value="#{eventBean.ssdate}" pattern="HH:mm"
+							timeOnly="true" />
+
+
+						<p:outputLabel class="w3-text-grey" for="effect" value="End Date:" />
+						<p:calendar class="w3-input w3-hover-grey" id="effect"
+							value="#{eventBean.edate}"
+							mindate="#{eventBean.currentDate}" effect="puff" />
+						<p:outputLabel class="w3-text-grey" for="time" value="Time:" />
+						<p:calendar class="w3-input w3-hover-grey" id="time"
+							value="#{eventBean.eedate}" pattern="HH:mm"
+							timeOnly="true" />
+
+
+						<p:outputLabel class="w3-text-grey" for="console" value="Privacy:" />
+						<p:selectOneRadio class="w3-input w3-hover-grey" id="console"
+							value="#{eventBean.newSp.privacy}">
+							<f:selectItem itemLabel="Public" itemValue="0" />
+							<f:selectItem itemLabel="Private" itemValue="1" />
+
+						</p:selectOneRadio>
+
+
+						<h:outputText class="w3-text-grey" value="Phone: " />
+						<h:inputText class="w3-input w3-hover-grey"
+							value="#{eventBean.newSp.repPhone}" />
+
+						
+
+					</h:panelGrid>
+
+					<div class="container-contact100-form-btn">
+						<h:commandButton type="submit" actionListener="#{eventBean.doAddEvent}" class="contact100-form-btn"
+							value="Save" />
+							
+					</div>
+				</h:form>
+			</div>
+
+		</div>
+		<!--===============================================================================================-->
+
+		<!--===============================================================================================-->
+		<script
+			src="#{request.contextPath}/resources/vendor/animsition/js/animsition.min.js"></script>
+		<!--===============================================================================================-->
+		<script
+			src="#{request.contextPath}/resources/vendor/bootstrap/js/popper.js"></script>
+		<script
+			src="#{request.contextPath}/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!--===============================================================================================-->
+		<script
+			src="#{request.contextPath}/resources/vendor/select2/select2.min.js"></script>
+		<!--===============================================================================================-->
+		<script
+			src="#{request.contextPath}/resources/vendor/daterangepicker/moment.min.js"></script>
+		<script
+			src="#{request.contextPath}/resources/vendor/daterangepicker/daterangepicker.js"></script>
+		<!--===============================================================================================-->
+		<script
+			src="#{request.contextPath}/resources/vendor/countdowntime/countdowntime.js"></script>
+		<!--===============================================================================================-->
+		<script src="#{request.contextPath}/resources/js/main.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+	</ui:define>
+</ui:composition>
