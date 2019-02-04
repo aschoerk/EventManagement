@@ -15,23 +15,65 @@
 		<dependency>
 			<groupId>tn.esprit.b2</groupId>
 			<artifactId>esprit1718b2eventmanagement-domain</artifactId>
+			<version>${project.version}</version>
 		</dependency>
+		<!-- logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.9</version>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<version>4.12</version>
 		</dependency>
 		<dependency>
-			<groupId>org.jboss.arquillian.junit</groupId>
-			<artifactId>arquillian-junit-container</artifactId>
+			<groupId>net.oneandone.ioc-unit</groupId>
+			<artifactId>ioc-unit-ejb</artifactId>
+			<version>2.0.1-alpha-06-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.jboss.arquillian.protocol</groupId>
-			<artifactId>arquillian-protocol-servlet</artifactId>
+			<groupId>net.oneandone.ioc-unit</groupId>
+			<artifactId>weld2-starter</artifactId>
+			<version>2.0.1-alpha-06-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.2.4.Final</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.2.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.4.Final</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.197</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -48,46 +90,52 @@
 			</activation>
 			<build>
 				<plugins>
+
 					<plugin>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<version>${maven.surefire.plugin.version}</version>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.8.0</version>
 						<configuration>
-							<skip>true</skip>
+							<source>1.8</source>
+							<target>1.8</target>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M2</version>
+						<dependencies>
+							<dependency>
+								<groupId>org.apache.maven.surefire</groupId>
+								<artifactId>surefire-junit47</artifactId>
+								<version>2.22.1</version>
+							</dependency>
+						</dependencies>
+						<configuration>
+							<systemPropertyVariables>
+								<javax.xml.parsers.DocumentBuilderFactory>
+									com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl
+								</javax.xml.parsers.DocumentBuilderFactory>
+							</systemPropertyVariables>
+
+							<reportFormat>plain</reportFormat>
+							<redirectTestOutputToFile>true</redirectTestOutputToFile>
+							<!-- Sets the VM argument line used when unit tests are run. -->
+							<!--argLine> - -add-modules java.xml,java.sql -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006</argLine-->
+							<argLine>
+								-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006
+							</argLine>
+							<forkCount>1</forkCount>
+							<reuseForks>false</reuseForks>
+							<classpathDependencyExcludes>
+								<classpathDependencyExclude>net.oneandone:purecdi-tests</classpathDependencyExclude>
+							</classpathDependencyExcludes>
 						</configuration>
 					</plugin>
 				</plugins>
+
 			</build>
 		</profile>
 
-		<profile>
-			<!-- An optional Arquillian testing profile that executes tests in your 
-				WildFly instance -->
-			<!-- This profile will start a new WildFly instance, and execute the test, 
-				shutting it down when done -->
-			<!-- Run with: mvn clean test -Parq-wildfly-managed -->
-			<id>arq-wildfly-managed</id>
-			<dependencies>
-				<dependency>
-					<groupId>org.wildfly</groupId>
-					<artifactId>wildfly-arquillian-container-managed</artifactId>
-					<scope>test</scope>
-				</dependency>
-			</dependencies>
-		</profile>
-
-		<profile>
-			<!-- An optional Arquillian testing profile that executes tests in a remote 
-				WildFly instance REMOTE SERVER PARAMS ARE TO BE CONFIGURED IN arquillian.xml file -->
-			<!-- Run with: mvn clean test -Parq-wildfly-remote -->
-			<id>arq-wildfly-remote</id>
-			<dependencies>
-				<dependency>
-					<groupId>org.wildfly</groupId>
-					<artifactId>wildfly-arquillian-container-remote</artifactId>
-					<scope>test</scope>
-				</dependency>
-			</dependencies>
-		</profile>
 
 	</profiles>
 </project>

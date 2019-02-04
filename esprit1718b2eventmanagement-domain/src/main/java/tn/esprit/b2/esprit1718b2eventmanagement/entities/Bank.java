@@ -22,9 +22,9 @@ public class Bank implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@OneToMany( mappedBy = "bank", cascade = CascadeType.ALL,fetch = FetchType.EAGER) 
+	@OneToMany( mappedBy = "bank", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Transfer> transfers;
-	@OneToMany( mappedBy = "bank", cascade = CascadeType.ALL,fetch = FetchType.EAGER) 
+	@OneToMany( mappedBy = "bank", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<BankAccount> accounts;
 	private static final long serialVersionUID = 1L;
 
